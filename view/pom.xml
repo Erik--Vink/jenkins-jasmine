@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- expanded with version 3.1.6 -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.normalizedsystems</groupId>
+    <artifactId>obnieuw</artifactId>
+    <version>1.0</version>
+  </parent>
+
+  <groupId>org.normalizedsystems</groupId>
+  <artifactId>obnieuw-view</artifactId>
+
+  <name>obnieuw-view</name>
+  <url>http://www.normalizedsystems.org</url>
+
+  <dependencies>
+    <!-- component -->
+    <dependency>
+      <groupId>org.normalizedsystems</groupId>
+      <artifactId>obnieuw-control</artifactId>
+    </dependency>
+
+    <!-- external -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>jsp-api</artifactId>
+    </dependency>
+
+    <!-- anchor:custom-dependencies:start -->
+    <!-- anchor:custom-dependencies:end -->
+  </dependencies>
+
+  <!-- anchor:custom-project:start -->
+  <!-- anchor:custom-project:end -->
+</project>

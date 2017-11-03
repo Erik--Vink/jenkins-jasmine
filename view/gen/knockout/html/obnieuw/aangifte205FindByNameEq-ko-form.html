@@ -1,0 +1,19 @@
+<!-- expanded with version 3.1.6 -->
+<fieldset>
+<!-- anchor:form-fields:start -->
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte205.name', editMode), css: { error: detailModel.name.hasErrors}">
+    <label class="control-label"
+           for="aangifte205.name"
+           data-bind="translate: 'obnieuw.aangifte205.name'">
+    </label>
+    <div class="controls" id="aangifte205.name" data-bind="focus: 1">
+      <input type='text' name='aangifte205.name' data-bind="textInput: detailModel.name, enable: isFieldEnabled('aangifte205.name', editMode)" />
+      <div data-bind="visible: detailModel.name.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.name.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<!-- anchor:form-fields:end -->
+</fieldset>

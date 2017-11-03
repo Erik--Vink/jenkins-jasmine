@@ -1,0 +1,196 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <form class="form-horizontal form-align-left" data-bind="submit: confirm, enterKey: confirm">
+                <!--<input type="hidden" name="aangifte.id" data-bind="value: formViewModel.id"/>-->
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="alert alert-danger" data-bind="visible: formViewModel.hasErrors" role="alert">
+                            <div>
+                                <i class="icon-exclamation-sign" aria-hidden="true"></i>
+                                <span>Dit formulier bevat fouten. Corrigeer deze alstublieft.</span>
+                            </div>
+                            <ul data-bind="foreach: formViewModel.errorMessages">
+                                <li class="errorMessage" data-bind="text: $data"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row divider">
+                    <div class="col-sm-4">
+                        <div class="form-group" data-bind="css: { 'has-error': formViewModel.aangiftenummer.hasErrors}">
+                            <label for="aangifte.aangiftenummer" class="col-sm-6 control-label" data-bind="translate: 'label.obnieuw.aangifte.aangiftenummer'"></label>
+                            <div class="col-sm-6" data-bind="focus: 1">
+                                <input id="aangifte.aangiftenummer" class="form-control" type='text' name='aangifte.aangiftenummer' data-bind="value: formViewModel.aangiftenummer"/>
+                                <div data-bind="visible: formViewModel.aangiftenummer.hasErrors" class="help-block">
+                                    <ul data-bind="with: formViewModel.aangiftenummer.errorMessages">
+                                        <li data-bind="text: $data"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" data-bind="css: { 'has-error': formViewModel.bezorgindicatie.hasErrors}">
+                            <label for="aangifte.bezorgindicatie" class="col-sm-6 control-label" data-bind="translate: 'label.obnieuw.aangifte.bezorgindicatie'"></label>
+                            <div class="col-sm-6" data-bind="focus: 2">
+                                <select id="aangifte.bezorgindicatie" class="form-control" name='aangifte.bezorgindicatie' data-bind="value: formViewModel.bezorgindicatie">
+                                    <option>Post</option>
+                                    <option>Geen post</option>
+                                </select>
+                                <div data-bind="visible: formViewModel.bezorgindicatie.hasErrors" class="help-block">
+                                    <ul data-bind="with: formViewModel.bezorgindicatie.errorMessages">
+                                        <li data-bind="text: $data"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group" data-bind="css: { 'has-error': formViewModel.datum_binnenkomst.hasErrors}" >
+                            <label for="aangifte.datum_binnenkomst" class="col-sm-6 control-label" data-bind="translate: 'label.obnieuw.aangifte.datum_binnenkomst'"></label>
+                            <div class="col-sm-6">
+                                <span id="aangifte.datum_binnenkomst" data-bind='dateInput: formViewModel.datum_binnenkomst, focus: 3'></span>
+                                <div data-bind="visible: formViewModel.datum_binnenkomst.hasErrors" class="help-block">
+                                    <ul data-bind="with: formViewModel.datum_binnenkomst.errorMessages">
+                                        <li data-bind="text: $data"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" data-bind="css: { 'has-error': formViewModel.dagnummer.hasErrors}">
+                            <label for="aangifte.dagnummer" class="col-sm-6 control-label" data-bind="translate: 'label.obnieuw.aangifte.dagnummer'"></label>
+                            <div class="col-sm-6" data-bind="focus: 4">
+                                <input id="aangifte.dagnummer" class="form-control" type='text' name='aangifte.dagnummer' data-bind="value: formViewModel.dagnummer"/>
+                                <div data-bind="visible: formViewModel.dagnummer.hasErrors" class="help-block">
+                                    <ul data-bind="with: formViewModel.dagnummer.errorMessages">
+                                        <li data-bind="text: $data"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" data-bind="css: { 'has-error': formViewModel.volgnummer.hasErrors}">
+                            <label for="aangifte.volgnummer" class="col-sm-6 control-label" data-bind="translate: 'label.obnieuw.aangifte.volgnummer'"></label>
+                            <div class="col-sm-6" data-bind="focus: 5">
+                                <input id="aangifte.volgnummer" class="form-control" type='text' name='aangifte.volgnummer' data-bind="value: formViewModel.volgnummer"/>
+                                <div data-bind="visible: formViewModel.volgnummer.hasErrors" class="help-block">
+                                    <ul data-bind="with: formViewModel.volgnummer.errorMessages">
+                                        <li data-bind="text: $data"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2 col-sm-offset-4">
+                        <label class="control-label" for="aangifte.belast_0_procent_omzetbedrag"
+                               data-bind="translate: 'label.obnieuw.aangifte.omzetbedrag'"></label>
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="control-label" for="aangifte.belast_0_procent_omzetbedrag"
+                               data-bind="translate: 'label.obnieuw.aangifte.belast_bedrag'"></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label class="control-label" for="aangifte.belast_0_procent_omzetbedrag" data-bind="translate: 'label.obnieuw.aangifte.belast_0_procent'"></label>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group" data-bind="css: { 'has-error': formViewModel.belast_0_procent_omzetbedrag.hasErrors}">
+                            <div class="col-sm-12" data-bind="focus: 6">
+                                <div class="input-group">
+                                    <div class="input-group-addon">&euro;</div>
+                                    <input id="aangifte.belast_0_procent_omzetbedrag" class="form-control" type='text' name='aangifte.belast_0_procent_omzetbedrag' data-bind="value: formViewModel.belast_0_procent_omzetbedrag"/>
+                                </div>
+                                <div data-bind="visible: formViewModel.belast_0_procent_omzetbedrag.hasErrors" class="help-block">
+                                    <ul data-bind="with: formViewModel.belast_0_procent_omzetbedrag.errorMessages">
+                                        <li data-bind="text: $data"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group" data-bind="css: { 'has-error': formViewModel.belast_0_procent_belast_bedrag.hasErrors}">
+                            <div class="col-sm-12" data-bind="focus: 7">
+                                <div class="input-group">
+                                    <div class="input-group-addon">&euro;</div>
+                                    <input id="aangifte.belast_0_procent_belast_bedrag" class="form-control" type='text' name='aangifte.belast_0_procent_belast_bedrag' data-bind="value: formViewModel.belast_0_procent_belast_bedrag"/>
+                                </div>
+                                <div data-bind="visible: formViewModel.belast_0_procent_belast_bedrag.hasErrors" class="help-block">
+                                    <ul data-bind="with: formViewModel.belast_0_procent_belast_bedrag.errorMessages">
+                                        <li data-bind="text: $data"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row divider">
+                    <div class="col-sm-4">
+                        <label class="control-label" for="aangifte.belast_0_procent_omzetbedrag" data-bind="translate: 'label.obnieuw.aangifte.belast_overige_procent'"></label>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group" data-bind="css: { 'has-error': formViewModel.belast_overige_procent_omzetbedrag.hasErrors}">
+                            <div class="col-sm-12" data-bind="focus: 8">
+                                <div class="input-group">
+                                    <div class="input-group-addon">&euro;</div>
+                                    <input id="aangifte.belast_overige_procent_omzetbedrag" class="form-control" type='text' name='aangifte.belast_overige_procent_omzetbedrag' data-bind="value: formViewModel.belast_overige_procent_omzetbedrag"/>
+                                </div>
+                                <div data-bind="visible: formViewModel.belast_overige_procent_omzetbedrag.hasErrors" class="help-block">
+                                    <ul data-bind="with: formViewModel.belast_overige_procent_omzetbedrag.errorMessages">
+                                        <li data-bind="text: $data"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group" data-bind="css: { 'has-error': formViewModel.belast_overige_procent_belast_bedrag.hasErrors}">
+                            <div class="col-sm-12" data-bind="focus: 9">
+                                <div class="input-group">
+                                    <div class="input-group-addon">&euro;</div>
+                                    <input id="aangifte.belast_overige_procent_belast_bedrag" class="form-control" type='text' name='aangifte.belast_overige_procent_belast_bedrag' data-bind="value: formViewModel.belast_overige_procent_belast_bedrag"/>
+                                </div>
+                                <div data-bind="visible: formViewModel.belast_overige_procent_belast_bedrag.hasErrors" class="help-block">
+                                    <ul data-bind="with: formViewModel.belast_overige_procent_belast_bedrag.errorMessages">
+                                        <li data-bind="text: $data"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label class="control-label"
+                               for="aangifte.totaal_betalen_of_terug_te_ontvangen"
+                               data-bind="translate: 'label.obnieuw.aangifte.totaal_betalen_of_terug_te_ontvangen'">
+                        </label>
+                    </div>
+                    <div class="col-sm-2 col-sm-offset-2">
+                        <div class="form-group" data-bind="css: { 'has-error': formViewModel.totaal_betalen_of_terug_te_ontvangen.hasErrors}">
+                            <div class="col-sm-12" data-bind="focus: 10">
+                                <div class="input-group">
+                                    <div class="input-group-addon">&euro;</div>
+                                    <input id="aangifte.totaal_betalen_of_terug_te_ontvangen" class="form-control" type='text' name='aangifte.totaal_betalen_of_terug_te_ontvangen' data-bind="value: formViewModel.totaal_betalen_of_terug_te_ontvangen"/>
+                                </div>
+                                <div data-bind="visible: formViewModel.totaal_betalen_of_terug_te_ontvangen.hasErrors" class="help-block">
+                                    <ul data-bind="with: formViewModel.totaal_betalen_of_terug_te_ontvangen.errorMessages">
+                                        <li data-bind="text: $data"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <button type="submit" class="btn btn-primary align-right" data-bind="focus: 11">Verwerk</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

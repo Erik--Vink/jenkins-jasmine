@@ -1,0 +1,399 @@
+<form class="form-horizontal" data-bind="submit: $parent.confirm, enterKey: $parent.confirm, escapeKey: $parent.close">
+  <fieldset>
+  <input type="hidden" name="aangifte.id" data-bind="value: detailModel.id" />
+  <!-- anchor:form-fields:start -->
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.obnummer', editMode), css: { error: detailModel.obnummer.hasErrors}">
+    <label class="control-label"
+           for="aangifte.obnummer"
+           data-bind="translate: 'obnieuw.aangifte.obnummer'">
+    </label>
+    <div class="controls" id="aangifte.obnummer" data-bind="focus: 1">
+      <input type='text' name='aangifte.obnummer' data-bind="textInput: detailModel.obnummer, enable: isFieldEnabled('aangifte.obnummer', editMode)" />
+      <div data-bind="visible: detailModel.obnummer.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.obnummer.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.aangiftenummer', editMode), css: { error: detailModel.aangiftenummer.hasErrors}">
+    <label class="control-label"
+           for="aangifte.aangiftenummer"
+           data-bind="translate: 'obnieuw.aangifte.aangiftenummer'">
+    </label>
+    <div class="controls" id="aangifte.aangiftenummer" data-bind="focus: 2">
+      <input type='text' name='aangifte.aangiftenummer' data-bind="textInput: detailModel.aangiftenummer, enable: isFieldEnabled('aangifte.aangiftenummer', editMode)" />
+      <div data-bind="visible: detailModel.aangiftenummer.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.aangiftenummer.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.belast_0_procent_omzetbedrag', editMode), css: { error: detailModel.belast_0_procent_omzetbedrag.hasErrors}">
+    <label class="control-label"
+           for="aangifte.belast_0_procent_omzetbedrag"
+           data-bind="translate: 'obnieuw.aangifte.belast_0_procent_omzetbedrag'">
+    </label>
+    <div class="controls" id="aangifte.belast_0_procent_omzetbedrag" data-bind="focus: 3">
+      <span data-bind='doubleInput: detailModel.belast_0_procent_omzetbedrag, enable: isFieldEnabled("aangifte.belast_0_procent_omzetbedrag", editMode)'></span>
+      <div data-bind="visible: detailModel.belast_0_procent_omzetbedrag.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.belast_0_procent_omzetbedrag.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.belast_0_procent_belast_bedrag', editMode), css: { error: detailModel.belast_0_procent_belast_bedrag.hasErrors}">
+    <label class="control-label"
+           for="aangifte.belast_0_procent_belast_bedrag"
+           data-bind="translate: 'obnieuw.aangifte.belast_0_procent_belast_bedrag'">
+    </label>
+    <div class="controls" id="aangifte.belast_0_procent_belast_bedrag" data-bind="focus: 4">
+      <span data-bind='doubleInput: detailModel.belast_0_procent_belast_bedrag, enable: isFieldEnabled("aangifte.belast_0_procent_belast_bedrag", editMode)'></span>
+      <div data-bind="visible: detailModel.belast_0_procent_belast_bedrag.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.belast_0_procent_belast_bedrag.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.datum_binnenkomst', editMode), css: { error: detailModel.datum_binnenkomst.hasErrors}">
+    <label class="control-label"
+           for="aangifte.datum_binnenkomst"
+           data-bind="translate: 'obnieuw.aangifte.datum_binnenkomst'">
+    </label>
+    <div class="controls" id="aangifte.datum_binnenkomst" data-bind="focus: 5">
+      <span data-bind='dateInput: detailModel.datum_binnenkomst, enable: isFieldEnabled("aangifte.datum_binnenkomst", editMode)'></span>
+      <div data-bind="visible: detailModel.datum_binnenkomst.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.datum_binnenkomst.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.dagnummer', editMode), css: { error: detailModel.dagnummer.hasErrors}">
+    <label class="control-label"
+           for="aangifte.dagnummer"
+           data-bind="translate: 'obnieuw.aangifte.dagnummer'">
+    </label>
+    <div class="controls" id="aangifte.dagnummer" data-bind="focus: 6">
+      <input type='text' name='aangifte.dagnummer' data-bind="textInput: detailModel.dagnummer, enable: isFieldEnabled('aangifte.dagnummer', editMode)" />
+      <div data-bind="visible: detailModel.dagnummer.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.dagnummer.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.volgnummer', editMode), css: { error: detailModel.volgnummer.hasErrors}">
+    <label class="control-label"
+           for="aangifte.volgnummer"
+           data-bind="translate: 'obnieuw.aangifte.volgnummer'">
+    </label>
+    <div class="controls" id="aangifte.volgnummer" data-bind="focus: 7">
+      <input type='text' name='aangifte.volgnummer' data-bind="textInput: detailModel.volgnummer, enable: isFieldEnabled('aangifte.volgnummer', editMode)" />
+      <div data-bind="visible: detailModel.volgnummer.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.volgnummer.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.bezorgindicatie', editMode), css: { error: detailModel.bezorgindicatie.hasErrors}">
+    <label class="control-label"
+           for="aangifte.bezorgindicatie"
+           data-bind="translate: 'obnieuw.aangifte.bezorgindicatie'">
+    </label>
+    <div class="controls" id="aangifte.bezorgindicatie" data-bind="focus: 8">
+      <input type='text' name='aangifte.bezorgindicatie' data-bind="textInput: detailModel.bezorgindicatie, enable: isFieldEnabled('aangifte.bezorgindicatie', editMode)" />
+      <div data-bind="visible: detailModel.bezorgindicatie.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.bezorgindicatie.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.belast_overige_procent_omzetbedrag', editMode), css: { error: detailModel.belast_overige_procent_omzetbedrag.hasErrors}">
+    <label class="control-label"
+           for="aangifte.belast_overige_procent_omzetbedrag"
+           data-bind="translate: 'obnieuw.aangifte.belast_overige_procent_omzetbedrag'">
+    </label>
+    <div class="controls" id="aangifte.belast_overige_procent_omzetbedrag" data-bind="focus: 9">
+      <span data-bind='doubleInput: detailModel.belast_overige_procent_omzetbedrag, enable: isFieldEnabled("aangifte.belast_overige_procent_omzetbedrag", editMode)'></span>
+      <div data-bind="visible: detailModel.belast_overige_procent_omzetbedrag.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.belast_overige_procent_omzetbedrag.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.belast_overige_procent_belast_bedrag', editMode), css: { error: detailModel.belast_overige_procent_belast_bedrag.hasErrors}">
+    <label class="control-label"
+           for="aangifte.belast_overige_procent_belast_bedrag"
+           data-bind="translate: 'obnieuw.aangifte.belast_overige_procent_belast_bedrag'">
+    </label>
+    <div class="controls" id="aangifte.belast_overige_procent_belast_bedrag" data-bind="focus: 10">
+      <span data-bind='doubleInput: detailModel.belast_overige_procent_belast_bedrag, enable: isFieldEnabled("aangifte.belast_overige_procent_belast_bedrag", editMode)'></span>
+      <div data-bind="visible: detailModel.belast_overige_procent_belast_bedrag.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.belast_overige_procent_belast_bedrag.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.privegebruik_omzetbedrag', editMode), css: { error: detailModel.privegebruik_omzetbedrag.hasErrors}">
+    <label class="control-label"
+           for="aangifte.privegebruik_omzetbedrag"
+           data-bind="translate: 'obnieuw.aangifte.privegebruik_omzetbedrag'">
+    </label>
+    <div class="controls" id="aangifte.privegebruik_omzetbedrag" data-bind="focus: 11">
+      <span data-bind='doubleInput: detailModel.privegebruik_omzetbedrag, enable: isFieldEnabled("aangifte.privegebruik_omzetbedrag", editMode)'></span>
+      <div data-bind="visible: detailModel.privegebruik_omzetbedrag.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.privegebruik_omzetbedrag.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.privegebruik_belast_bedrag', editMode), css: { error: detailModel.privegebruik_belast_bedrag.hasErrors}">
+    <label class="control-label"
+           for="aangifte.privegebruik_belast_bedrag"
+           data-bind="translate: 'obnieuw.aangifte.privegebruik_belast_bedrag'">
+    </label>
+    <div class="controls" id="aangifte.privegebruik_belast_bedrag" data-bind="focus: 12">
+      <span data-bind='doubleInput: detailModel.privegebruik_belast_bedrag, enable: isFieldEnabled("aangifte.privegebruik_belast_bedrag", editMode)'></span>
+      <div data-bind="visible: detailModel.privegebruik_belast_bedrag.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.privegebruik_belast_bedrag.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.niet_belast_0_procent_omzetbedrag', editMode), css: { error: detailModel.niet_belast_0_procent_omzetbedrag.hasErrors}">
+    <label class="control-label"
+           for="aangifte.niet_belast_0_procent_omzetbedrag"
+           data-bind="translate: 'obnieuw.aangifte.niet_belast_0_procent_omzetbedrag'">
+    </label>
+    <div class="controls" id="aangifte.niet_belast_0_procent_omzetbedrag" data-bind="focus: 13">
+      <span data-bind='doubleInput: detailModel.niet_belast_0_procent_omzetbedrag, enable: isFieldEnabled("aangifte.niet_belast_0_procent_omzetbedrag", editMode)'></span>
+      <div data-bind="visible: detailModel.niet_belast_0_procent_omzetbedrag.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.niet_belast_0_procent_omzetbedrag.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.heffing_verlegd_naar_aangever_omzetbedrag', editMode), css: { error: detailModel.heffing_verlegd_naar_aangever_omzetbedrag.hasErrors}">
+    <label class="control-label"
+           for="aangifte.heffing_verlegd_naar_aangever_omzetbedrag"
+           data-bind="translate: 'obnieuw.aangifte.heffing_verlegd_naar_aangever_omzetbedrag'">
+    </label>
+    <div class="controls" id="aangifte.heffing_verlegd_naar_aangever_omzetbedrag" data-bind="focus: 14">
+      <span data-bind='doubleInput: detailModel.heffing_verlegd_naar_aangever_omzetbedrag, enable: isFieldEnabled("aangifte.heffing_verlegd_naar_aangever_omzetbedrag", editMode)'></span>
+      <div data-bind="visible: detailModel.heffing_verlegd_naar_aangever_omzetbedrag.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.heffing_verlegd_naar_aangever_omzetbedrag.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.heffing_verlegd_naar_aangever_belast_bedrag', editMode), css: { error: detailModel.heffing_verlegd_naar_aangever_belast_bedrag.hasErrors}">
+    <label class="control-label"
+           for="aangifte.heffing_verlegd_naar_aangever_belast_bedrag"
+           data-bind="translate: 'obnieuw.aangifte.heffing_verlegd_naar_aangever_belast_bedrag'">
+    </label>
+    <div class="controls" id="aangifte.heffing_verlegd_naar_aangever_belast_bedrag" data-bind="focus: 15">
+      <span data-bind='doubleInput: detailModel.heffing_verlegd_naar_aangever_belast_bedrag, enable: isFieldEnabled("aangifte.heffing_verlegd_naar_aangever_belast_bedrag", editMode)'></span>
+      <div data-bind="visible: detailModel.heffing_verlegd_naar_aangever_belast_bedrag.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.heffing_verlegd_naar_aangever_belast_bedrag.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.export_buiten_eu_omzetbedrag', editMode), css: { error: detailModel.export_buiten_eu_omzetbedrag.hasErrors}">
+    <label class="control-label"
+           for="aangifte.export_buiten_eu_omzetbedrag"
+           data-bind="translate: 'obnieuw.aangifte.export_buiten_eu_omzetbedrag'">
+    </label>
+    <div class="controls" id="aangifte.export_buiten_eu_omzetbedrag" data-bind="focus: 16">
+      <span data-bind='doubleInput: detailModel.export_buiten_eu_omzetbedrag, enable: isFieldEnabled("aangifte.export_buiten_eu_omzetbedrag", editMode)'></span>
+      <div data-bind="visible: detailModel.export_buiten_eu_omzetbedrag.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.export_buiten_eu_omzetbedrag.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.levering_diensten_binnen_eu_omzetbedrag', editMode), css: { error: detailModel.levering_diensten_binnen_eu_omzetbedrag.hasErrors}">
+    <label class="control-label"
+           for="aangifte.levering_diensten_binnen_eu_omzetbedrag"
+           data-bind="translate: 'obnieuw.aangifte.levering_diensten_binnen_eu_omzetbedrag'">
+    </label>
+    <div class="controls" id="aangifte.levering_diensten_binnen_eu_omzetbedrag" data-bind="focus: 17">
+      <span data-bind='doubleInput: detailModel.levering_diensten_binnen_eu_omzetbedrag, enable: isFieldEnabled("aangifte.levering_diensten_binnen_eu_omzetbedrag", editMode)'></span>
+      <div data-bind="visible: detailModel.levering_diensten_binnen_eu_omzetbedrag.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.levering_diensten_binnen_eu_omzetbedrag.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.installatie_televerkoop_binnen_eu_omzetbedrag', editMode), css: { error: detailModel.installatie_televerkoop_binnen_eu_omzetbedrag.hasErrors}">
+    <label class="control-label"
+           for="aangifte.installatie_televerkoop_binnen_eu_omzetbedrag"
+           data-bind="translate: 'obnieuw.aangifte.installatie_televerkoop_binnen_eu_omzetbedrag'">
+    </label>
+    <div class="controls" id="aangifte.installatie_televerkoop_binnen_eu_omzetbedrag" data-bind="focus: 18">
+      <span data-bind='doubleInput: detailModel.installatie_televerkoop_binnen_eu_omzetbedrag, enable: isFieldEnabled("aangifte.installatie_televerkoop_binnen_eu_omzetbedrag", editMode)'></span>
+      <div data-bind="visible: detailModel.installatie_televerkoop_binnen_eu_omzetbedrag.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.installatie_televerkoop_binnen_eu_omzetbedrag.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.leveringen_diensten_buiten_eu_omzetbedrag', editMode), css: { error: detailModel.leveringen_diensten_buiten_eu_omzetbedrag.hasErrors}">
+    <label class="control-label"
+           for="aangifte.leveringen_diensten_buiten_eu_omzetbedrag"
+           data-bind="translate: 'obnieuw.aangifte.leveringen_diensten_buiten_eu_omzetbedrag'">
+    </label>
+    <div class="controls" id="aangifte.leveringen_diensten_buiten_eu_omzetbedrag" data-bind="focus: 19">
+      <span data-bind='doubleInput: detailModel.leveringen_diensten_buiten_eu_omzetbedrag, enable: isFieldEnabled("aangifte.leveringen_diensten_buiten_eu_omzetbedrag", editMode)'></span>
+      <div data-bind="visible: detailModel.leveringen_diensten_buiten_eu_omzetbedrag.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.leveringen_diensten_buiten_eu_omzetbedrag.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.leveringen_diensten_buiten_eu_belast_bedrag', editMode), css: { error: detailModel.leveringen_diensten_buiten_eu_belast_bedrag.hasErrors}">
+    <label class="control-label"
+           for="aangifte.leveringen_diensten_buiten_eu_belast_bedrag"
+           data-bind="translate: 'obnieuw.aangifte.leveringen_diensten_buiten_eu_belast_bedrag'">
+    </label>
+    <div class="controls" id="aangifte.leveringen_diensten_buiten_eu_belast_bedrag" data-bind="focus: 20">
+      <span data-bind='doubleInput: detailModel.leveringen_diensten_buiten_eu_belast_bedrag, enable: isFieldEnabled("aangifte.leveringen_diensten_buiten_eu_belast_bedrag", editMode)'></span>
+      <div data-bind="visible: detailModel.leveringen_diensten_buiten_eu_belast_bedrag.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.leveringen_diensten_buiten_eu_belast_bedrag.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.leveringen_diensten_binnen_eu_omzetbedrag', editMode), css: { error: detailModel.leveringen_diensten_binnen_eu_omzetbedrag.hasErrors}">
+    <label class="control-label"
+           for="aangifte.leveringen_diensten_binnen_eu_omzetbedrag"
+           data-bind="translate: 'obnieuw.aangifte.leveringen_diensten_binnen_eu_omzetbedrag'">
+    </label>
+    <div class="controls" id="aangifte.leveringen_diensten_binnen_eu_omzetbedrag" data-bind="focus: 21">
+      <span data-bind='doubleInput: detailModel.leveringen_diensten_binnen_eu_omzetbedrag, enable: isFieldEnabled("aangifte.leveringen_diensten_binnen_eu_omzetbedrag", editMode)'></span>
+      <div data-bind="visible: detailModel.leveringen_diensten_binnen_eu_omzetbedrag.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.leveringen_diensten_binnen_eu_omzetbedrag.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.leveringen_diensten_binnen_eu_belast_bedrag', editMode), css: { error: detailModel.leveringen_diensten_binnen_eu_belast_bedrag.hasErrors}">
+    <label class="control-label"
+           for="aangifte.leveringen_diensten_binnen_eu_belast_bedrag"
+           data-bind="translate: 'obnieuw.aangifte.leveringen_diensten_binnen_eu_belast_bedrag'">
+    </label>
+    <div class="controls" id="aangifte.leveringen_diensten_binnen_eu_belast_bedrag" data-bind="focus: 22">
+      <span data-bind='doubleInput: detailModel.leveringen_diensten_binnen_eu_belast_bedrag, enable: isFieldEnabled("aangifte.leveringen_diensten_binnen_eu_belast_bedrag", editMode)'></span>
+      <div data-bind="visible: detailModel.leveringen_diensten_binnen_eu_belast_bedrag.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.leveringen_diensten_binnen_eu_belast_bedrag.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.totaal_omzetbelasting', editMode), css: { error: detailModel.totaal_omzetbelasting.hasErrors}">
+    <label class="control-label"
+           for="aangifte.totaal_omzetbelasting"
+           data-bind="translate: 'obnieuw.aangifte.totaal_omzetbelasting'">
+    </label>
+    <div class="controls" id="aangifte.totaal_omzetbelasting" data-bind="focus: 23">
+      <span data-bind='doubleInput: detailModel.totaal_omzetbelasting, enable: isFieldEnabled("aangifte.totaal_omzetbelasting", editMode)'></span>
+      <div data-bind="visible: detailModel.totaal_omzetbelasting.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.totaal_omzetbelasting.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.voorbelasting', editMode), css: { error: detailModel.voorbelasting.hasErrors}">
+    <label class="control-label"
+           for="aangifte.voorbelasting"
+           data-bind="translate: 'obnieuw.aangifte.voorbelasting'">
+    </label>
+    <div class="controls" id="aangifte.voorbelasting" data-bind="focus: 24">
+      <span data-bind='doubleInput: detailModel.voorbelasting, enable: isFieldEnabled("aangifte.voorbelasting", editMode)'></span>
+      <div data-bind="visible: detailModel.voorbelasting.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.voorbelasting.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.ko_regeling', editMode), css: { error: detailModel.ko_regeling.hasErrors}">
+    <label class="control-label"
+           for="aangifte.ko_regeling"
+           data-bind="translate: 'obnieuw.aangifte.ko_regeling'">
+    </label>
+    <div class="controls" id="aangifte.ko_regeling" data-bind="focus: 25">
+      <span data-bind='doubleInput: detailModel.ko_regeling, enable: isFieldEnabled("aangifte.ko_regeling", editMode)'></span>
+      <div data-bind="visible: detailModel.ko_regeling.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.ko_regeling.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.schatting_vorige_aangifte', editMode), css: { error: detailModel.schatting_vorige_aangifte.hasErrors}">
+    <label class="control-label"
+           for="aangifte.schatting_vorige_aangifte"
+           data-bind="translate: 'obnieuw.aangifte.schatting_vorige_aangifte'">
+    </label>
+    <div class="controls" id="aangifte.schatting_vorige_aangifte" data-bind="focus: 26">
+      <span data-bind='doubleInput: detailModel.schatting_vorige_aangifte, enable: isFieldEnabled("aangifte.schatting_vorige_aangifte", editMode)'></span>
+      <div data-bind="visible: detailModel.schatting_vorige_aangifte.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.schatting_vorige_aangifte.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.schatting_deze_aangifte', editMode), css: { error: detailModel.schatting_deze_aangifte.hasErrors}">
+    <label class="control-label"
+           for="aangifte.schatting_deze_aangifte"
+           data-bind="translate: 'obnieuw.aangifte.schatting_deze_aangifte'">
+    </label>
+    <div class="controls" id="aangifte.schatting_deze_aangifte" data-bind="focus: 27">
+      <span data-bind='doubleInput: detailModel.schatting_deze_aangifte, enable: isFieldEnabled("aangifte.schatting_deze_aangifte", editMode)'></span>
+      <div data-bind="visible: detailModel.schatting_deze_aangifte.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.schatting_deze_aangifte.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifte.totaal_betalen_of_terug_te_ontvangen', editMode), css: { error: detailModel.totaal_betalen_of_terug_te_ontvangen.hasErrors}">
+    <label class="control-label"
+           for="aangifte.totaal_betalen_of_terug_te_ontvangen"
+           data-bind="translate: 'obnieuw.aangifte.totaal_betalen_of_terug_te_ontvangen'">
+    </label>
+    <div class="controls" id="aangifte.totaal_betalen_of_terug_te_ontvangen" data-bind="focus: 28">
+      <span data-bind='doubleInput: detailModel.totaal_betalen_of_terug_te_ontvangen, enable: isFieldEnabled("aangifte.totaal_betalen_of_terug_te_ontvangen", editMode)'></span>
+      <div data-bind="visible: detailModel.totaal_betalen_of_terug_te_ontvangen.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.totaal_betalen_of_terug_te_ontvangen.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- anchor:form-fields:end -->
+  </fieldset>
+</form>

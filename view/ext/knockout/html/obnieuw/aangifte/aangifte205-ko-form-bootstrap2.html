@@ -1,0 +1,195 @@
+<form class="form-horizontal" data-bind="submit: confirm, enterKey: confirm">
+    <input type="hidden" name="aangifte.id" data-bind="value: id"/>
+
+    <div class="row divider">
+        <div class="span4">
+            <div class="control-group" data-bind="css: { error: obnummer.hasErrors}">
+                <label class="control-label" for="aangifte.obnummer"
+                       data-bind="translate: 'label.obnieuw.aangifte.obnummer'"></label>
+                <div class="controls" id="aangifte.obnummer" data-bind="focus: 1">
+                    <input type='text' name='aangifte.obnummer' data-bind="value: obnummer"/>
+                    <div data-bind="visible: obnummer.hasErrors" class="alert alert-error">
+                        <ul data-bind="with: obnummer.errorMessages">
+                            <li data-bind="text: $data"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group" data-bind="css: { error: bezorgindicatie.hasErrors}">
+                <label class="control-label"
+                       for="aangifte.bezorgindicatie"
+                       data-bind="translate: 'label.obnieuw.aangifte.bezorgindicatie'">
+                </label>
+                <div class="controls" id="aangifte.bezorgindicatie" data-bind="focus: 2">
+                    <input type='text' name='aangifte.bezorgindicatie' data-bind="textInput: bezorgindicatie"/>
+                    <div data-bind="visible: bezorgindicatie.hasErrors" class="alert alert-error">
+                        <ul data-bind="with: bezorgindicatie.errorMessages">
+                            <li data-bind="text: $data"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="span5">
+            <div class="control-group" data-bind="css: { error: datum_binnenkomst.hasErrors}">
+                <label class="control-label"
+                       for="aangifte.datum_binnenkomst"
+                       data-bind="translate: 'label.obnieuw.aangifte.datum_binnenkomst'">
+                </label>
+                <div class="controls" id="aangifte.datum_binnenkomst" data-bind="focus: 3">
+                    <span data-bind='dateInput: datum_binnenkomst'></span>
+                    <div data-bind="visible: datum_binnenkomst.hasErrors" class="alert alert-error">
+                        <ul data-bind="with: datum_binnenkomst.errorMessages">
+                            <li data-bind="text: $data"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group" data-bind="css: { error: dagnummer.hasErrors}">
+                <label class="control-label"
+                       for="aangifte.dagnummer"
+                       data-bind="translate: 'label.obnieuw.aangifte.dagnummer'">
+                </label>
+                <div class="controls" id="aangifte.dagnummer" data-bind="focus: 4">
+                    <input type='text' name='aangifte.dagnummer' data-bind="textInput: dagnummer"/>
+                    <div data-bind="visible: dagnummer.hasErrors" class="alert alert-error">
+                        <ul data-bind="with: dagnummer.errorMessages">
+                            <li data-bind="text: $data"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group" data-bind="css: { error: volgnummer.hasErrors}">
+                <label class="control-label"
+                       for="aangifte.volgnummer"
+                       data-bind="translate: 'label.obnieuw.aangifte.volgnummer'">
+                </label>
+                <div class="controls" id="aangifte.volgnummer" data-bind="focus: 5">
+                    <input type='text' name='aangifte.volgnummer' data-bind="textInput: volgnummer"/>
+                    <div data-bind="visible: volgnummer.hasErrors" class="alert alert-error">
+                        <ul data-bind="with: volgnummer.errorMessages">
+                            <li data-bind="text: $data"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span4"></div>
+        <div class="span3">
+            <label class="control-label" for="aangifte.belast_0_procent_omzetbedrag"
+                   data-bind="translate: 'label.obnieuw.aangifte.omzetbedrag'"></label>
+        </div>
+        <div class="span4">
+            <label class="control-label" for="aangifte.belast_0_procent_omzetbedrag"
+                   data-bind="translate: 'label.obnieuw.aangifte.belast_bedrag'"></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span4">
+            <label class="control-label" for="aangifte.belast_0_procent_omzetbedrag"
+                   data-bind="translate: 'label.obnieuw.aangifte.belast_0_procent'"></label>
+        </div>
+        <div class="span3 span-align-left">
+            <div class="control-group" data-bind="css: { error: belast_0_procent_omzetbedrag.hasErrors}">
+                <div class="controls" id="aangifte.belast_0_procent_omzetbedrag" data-bind="focus: 6">
+                    <div class="input-prepend">
+                        <span class="add-on">&euro;</span>
+                        <span data-bind='doubleInput: belast_0_procent_omzetbedrag'></span>
+                    </div>
+                    <div data-bind="visible: belast_0_procent_omzetbedrag.hasErrors"
+                         class="alert alert-error">
+                        <ul data-bind="with: belast_0_procent_omzetbedrag.errorMessages">
+                            <li data-bind="text: $data"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="span3 span-align-left">
+            <div class="control-group"
+                 data-bind="css: { error: belast_0_procent_belast_bedrag.hasErrors}">
+                <div class="controls" id="aangifte.belast_0_procent_belast_bedrag" data-bind="focus: 7">
+                    <div class="input-prepend">
+                        <span class="add-on">&euro;</span>
+                        <span data-bind='doubleInput: belast_0_procent_belast_bedrag'></span>
+                    </div>
+                    <div data-bind="visible: belast_0_procent_belast_bedrag.hasErrors"
+                         class="alert alert-error">
+                        <ul data-bind="with: belast_0_procent_belast_bedrag.errorMessages">
+                            <li data-bind="text: $data"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row divider">
+        <div class="span4">
+            <label class="control-label" for="aangifte.belast_0_procent_omzetbedrag"
+                   data-bind="translate: 'label.obnieuw.aangifte.belast_overige_procent'"></label>
+        </div>
+        <div class="span3 span-align-left">
+            <div class="control-group" data-bind="css: { error: belast_overige_procent_omzetbedrag.hasErrors}">
+                <div class="controls" id="aangifte.belast_overige_procent_omzetbedrag" data-bind="focus: 8">
+                    <div class="input-prepend">
+                        <span class="add-on">&euro;</span>
+                        <span data-bind='doubleInput: belast_overige_procent_omzetbedrag'></span>
+                    </div>
+                    <div data-bind="visible: belast_overige_procent_omzetbedrag.hasErrors"
+                         class="alert alert-error">
+                        <ul data-bind="with: belast_overige_procent_omzetbedrag.errorMessages">
+                            <li data-bind="text: $data"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="span3 span-align-left">
+            <div class="control-group" data-bind="css: { error: belast_overige_procent_belast_bedrag.hasErrors}">
+                <div class="controls" id="aangifte.belast_overige_procent_belast_bedrag" data-bind="focus: 9">
+                    <div class="input-prepend">
+                        <span class="add-on">&euro;</span>
+                        <span data-bind='doubleInput: belast_overige_procent_belast_bedrag'></span>
+                    </div>
+                    <div data-bind="visible: belast_overige_procent_belast_bedrag.hasErrors"
+                         class="alert alert-error">
+                        <ul data-bind="with: belast_overige_procent_belast_bedrag.errorMessages">
+                            <li data-bind="text: $data"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span4">
+            <label class="control-label"
+                   for="aangifte.totaal_betalen_of_terug_te_ontvangen"
+                   data-bind="translate: 'label.obnieuw.aangifte.totaal_betalen_of_terug_te_ontvangen'">
+            </label>
+        </div>
+        <div class="span3"></div>
+        <div class="span3 span-align-left">
+            <div class="control-group" data-bind="css: { error: totaal_betalen_of_terug_te_ontvangen.hasErrors}">
+                <div class="controls" id="aangifte.totaal_betalen_of_terug_te_ontvangen" data-bind="focus: 10">
+                    <div class="input-prepend">
+                        <span class="add-on">&euro;</span>
+                        <span data-bind='doubleInput: totaal_betalen_of_terug_te_ontvangen'></span>
+                    </div>
+                    <div data-bind="visible: totaal_betalen_of_terug_te_ontvangen.hasErrors" class="alert alert-error">
+                        <ul data-bind="with: totaal_betalen_of_terug_te_ontvangen.errorMessages">
+                            <li data-bind="text: $data"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span2">
+            <button type="submit" class="btn btn-primary align-right" data-bind="focus: 11">Verwerk</button>
+        </div>
+    </div>
+</form>

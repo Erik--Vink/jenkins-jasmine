@@ -1,0 +1,54 @@
+<form class="form-horizontal" data-bind="submit: $parent.confirm, enterKey: $parent.confirm, escapeKey: $parent.close">
+    <fieldset>
+        <input type="hidden" name="aangifte.id" data-bind="value: detailModel.id"/>
+        <!-- anchor:form-fields:start -->
+        <div class="control-group"
+             data-bind="visible: isFieldVisible('aangifte.obnummer', editMode), css: { error: detailModel.obnummer.hasErrors}">
+            <label class="control-label"
+                   for="aangifte.obnummer"
+                   data-bind="translate: 'obnieuw.aangifte.obnummer'">
+            </label>
+            <div class="controls" id="aangifte.obnummer" data-bind="focus: 1">
+                <input type='text' name='aangifte.obnummer'
+                       data-bind="textInput: detailModel.obnummer, enable: isFieldEnabled('aangifte.obnummer', editMode)"/>
+                <div data-bind="visible: detailModel.obnummer.hasErrors" class="alert alert-error">
+                    <ul data-bind="with: detailModel.obnummer.errorMessages">
+                        <li data-bind="text: $data"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="control-group"
+             data-bind="visible: isFieldVisible('aangifte.belast_0_procent_omzetbedrag', editMode), css: { error: detailModel.belast_0_procent_omzetbedrag.hasErrors}">
+            <label class="control-label"
+                   for="aangifte.belast_0_procent_omzetbedrag"
+                   data-bind="translate: 'obnieuw.aangifte.belast_0_procent_omzetbedrag'">
+            </label>
+            <div class="controls" id="aangifte.belast_0_procent_omzetbedrag" data-bind="focus: 3">
+                <span data-bind='doubleInput: detailModel.belast_0_procent_omzetbedrag, enable: isFieldEnabled("aangifte.belast_0_procent_omzetbedrag", editMode)'></span>
+                <div data-bind="visible: detailModel.belast_0_procent_omzetbedrag.hasErrors" class="alert alert-error">
+                    <ul data-bind="with: detailModel.belast_0_procent_omzetbedrag.errorMessages">
+                        <li data-bind="text: $data"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="control-group"
+             data-bind="visible: isFieldVisible('aangifte.belast_0_procent_belast_bedrag', editMode), css: { error: detailModel.belast_0_procent_belast_bedrag.hasErrors}">
+            <label class="control-label"
+                   for="aangifte.belast_0_procent_belast_bedrag"
+                   data-bind="translate: 'obnieuw.aangifte.belast_0_procent_belast_bedrag'">
+            </label>
+            <div class="controls" id="aangifte.belast_0_procent_belast_bedrag" data-bind="focus: 4">
+                <span data-bind='doubleInput: detailModel.belast_0_procent_belast_bedrag, enable: isFieldEnabled("aangifte.belast_0_procent_belast_bedrag", editMode)'></span>
+                <div data-bind="visible: detailModel.belast_0_procent_belast_bedrag.hasErrors"
+                     class="alert alert-error">
+                    <ul data-bind="with: detailModel.belast_0_procent_belast_bedrag.errorMessages">
+                        <li data-bind="text: $data"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- anchor:form-fields:end -->
+    </fieldset>
+</form>
