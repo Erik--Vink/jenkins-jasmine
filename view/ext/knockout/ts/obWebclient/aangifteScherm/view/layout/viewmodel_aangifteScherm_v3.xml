@@ -1,0 +1,30 @@
+<v3:ViewElement v3:caption="Opvoeren aangifte" v3:id="string"
+                xmlns:v3="urn://www.belastingdienst.nl/nscc/template/viewmodel/v3">
+    <dataelementModelLocation>www.company.org/cum/sonoras</dataelementModelLocation>
+    <viewparts>
+        <viewpart v3:id="header" v3:col-offset="1" v3:col-span="12" v3:row="1" v3:caption="">
+            <!--<viewpart v3:id="leftHeader" v3:caption="" v3:col-offset="1" v3:col-span="6" v3:row="1">-->
+                <!--<uiLabelFieldGroep v3:id="" v3:col-span="12">-->
+                    <!--<uiLabel v3:id="messageIdLabel" v3:col-offset="1" v3:col-span="4" v3:row="1" v3:caption=""/>-->
+                    <!--<uiField v3:id="messageId" v3:col-offset="2" v3:col-span="8" v3:row="1" v3:caption=""/>-->
+                <!--</uiLabelFieldGroep>-->
+            <!--</viewpart>-->
+            <viewpart v3:id="rightHeader" v3:caption="" v3:col-offset="2" v3:col-span="6" v3:row="1">
+                <uiLabelFieldGroep v3:id="dagnummerGroep" v3:col-span="8">
+                    <uiLabel v3:id="dagnummerLabel" v3:col-offset="1" v3:col-span="4" v3:row="1" v3:caption=""/>
+                    <uiField v3:id="dagnummer" v3:col-offset="2" v3:col-span="8" v3:row="1" v3:caption="" type="date"/>
+                </uiLabelFieldGroep>
+                <customCode file="">
+                    <code><![CDATA[
+                        <label id="label" class="control-label col-sm-4">
+                            <span data-bind="value: $root.dataViewModel.messageId"></span>
+                        </label>
+                        <div class="col-sm-8">
+                            <input id="testCode" type="text" data-bind="value: $root.dataViewModel.messageId" class="form-control">
+                        </div>
+    ]]></code>
+                </customCode>
+            </viewpart>
+        </viewpart>
+    </viewparts>
+</v3:ViewElement>

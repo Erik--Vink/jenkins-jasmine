@@ -1,0 +1,55 @@
+<v4:ViewElement v4:caption="Opvoeren aangifte" v4:id="string"
+                xmlns:v4="urn://www.belastingdienst.nl/nscc/template/viewmodel/v4">
+    <dataelementModelLocation>http://www.company.org/cum/sonoras</dataelementModelLocation>
+    <viewparts>
+        <viewpart v4:id="header" v4:col-offset="1" v4:col-span="12" v4:row="1" v4:caption="">
+            <viewpart v4:id="leftHeader" v4:caption="" v4:col-offset="1" v4:col-span="6" v4:row="1">
+                <uiLabelFieldGroep v4:id="" v4:col-span="12">
+                    <uiLabel v4:id="messageIdLabel" v4:col-offset="1" v4:col-span="4" v4:row="1" v4:caption=""/>
+                    <uiField v4:id="messageId" v4:col-offset="2" v4:col-span="8" v4:row="1" v4:caption=""/>
+                </uiLabelFieldGroep>
+            </viewpart>
+            <viewpart v4:id="rightHeader" v4:caption="" v4:col-offset="2" v4:col-span="6" v4:row="1">
+                <uiLabelFieldGroep v4:id="dagnummerGroep" v4:col-span="8">
+                    <uiLabel v4:id="dagnummerLabel" v4:col-offset="1" v4:col-span="4" v4:row="1" v4:caption=""/>
+                    <uiField v4:id="aangifte.dagnummer" v4:col-offset="2" v4:col-span="8" v4:row="1" v4:caption="" type="date" readonly="true"/>
+                </uiLabelFieldGroep>
+                <uiLabel v4:id="single" v4:col-offset="1" v4:col-span="4" v4:row="1" v4:caption="" translation=""/>
+            </viewpart>
+            <viewpart v4:col-span="6" v4:id="" v4:row="2">
+                <customCode>
+                    <code><![CDATA[
+                        <label id="label" class="control-label col-sm-4">
+                            <span>CustomCodeLabel</span>
+                        </label>
+                        <div class="col-sm-8">
+                            <input id="testCode" type="text" data-bind="value: $root.dataViewModel.messageId" class="form-control">
+                        </div>
+                    ]]>
+                    </code>
+                </customCode>
+            </viewpart>
+            <viewpart v4:col-span="6" v4:id="" v4:row="2">
+                <customCode>
+                    <code><![CDATA[
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label id="label" class="control-label col-sm-4">
+                                    <span>Datum Binnenkomst</span>
+                                </label>
+                                <div class="col-sm-8">
+                                    <span id="aangifte.datum_binnenkomst" data-bind='dateInput: $root.dataViewModel.messageId.datum_binnenkomst'></span>
+                                </div>
+                            </div>
+                        </div>
+                    ]]>
+                    </code>
+                </customCode>
+            </viewpart>
+            <viewpart v4:id="" v4:col-span="12">
+                <uiAction v4:col-span="2" v4:id="verwerkKnop" v4:caption="verwerk" class="btn btn-primary align-right" buttonType="submit"/>
+            </viewpart>
+        </viewpart>
+    </viewparts>
+</v4:ViewElement>
+

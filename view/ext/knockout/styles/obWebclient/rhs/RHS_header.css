@@ -1,0 +1,136 @@
+#Header {
+    width: 100%;
+    display: block;
+    background: transparent;
+}
+
+#Header .header-logo{
+    height: 8.7em;
+    background-color: #fff;
+}
+
+#Header .header-logo img {
+    position: absolute;
+    left: 50%;
+    margin-left: -2.2em;
+    height: 7.7em;
+    display: block;
+    border: 0;
+}
+
+#Header .header-bar{
+    background: #ddeff8;
+}
+
+#Header .header-title {
+    width: 100%;
+    font-size: 1.8em;
+    font-weight: bold;
+    padding: 4px 0 3px 10px;
+    line-height: 1.3em;
+}
+
+#Navigation {
+    background-color: #8fcae7;
+    padding-top: 28px;
+}
+
+#Navigation .navbar {
+    min-height: auto;
+    margin-bottom: 0px;
+    border: none;
+}
+
+#Navigation .navbar-collapse{
+    padding: 0;
+}
+
+#SubNavigation {
+    padding: 0 0 0 14px;
+    background: #ddeff8;
+    min-height: 10px;
+}
+
+#Navigation li, #SubNavigation li {
+    font-size: 12px;
+}
+
+#Navigation a, #SubNavigation a, #Navigation strong, #SubNavigation strong, #Navigation span, #SubNavigation span {
+    font-family: Arial, Geneva, Helvetica, sans-serif;
+    display: block;
+    padding: 5px 12px 5px 12px;
+    float: left;
+}
+
+#Navigation a, #Navigation span, #Navigation strong {
+    font-weight: bold;
+    color: #000;
+}
+
+#SubNavigation a, #SubNavigation span, #SubNavigation strong {
+    padding: 6px 12px 5px 12px;
+    color: #000;
+}
+
+#Navigation strong, #Navigation a:hover {
+    background-color: #ddeff8;
+}
+
+#Navigation span, #SubNavigation span {
+    color: #b6b6b6;
+}
+
+#SubNavigation a:hover {
+    text-decoration: underline;
+}
+
+#Navigation #menu {
+    padding: 0;
+}
+
+#Navigation ul.dropdown-menu {
+    font-size: 1.2em;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border-top: none;
+    border-color: #8fcae7;
+}
+
+#Navigation li a {
+    width:100%;
+}
+
+#Navigation .dropdown.open a{
+    background-color: #ddeff8;
+}
+
+#Navigation .dropdown.open .dropdown-menu a{
+    font-weight: normal;
+}
+
+#Navigation .dropdown.open .dropdown-menu a:hover{
+    font-weight: bold;
+}
+
+/** LoginStatus */
+#LoginStatus {
+    float:right;
+    padding-right: 10px;
+    font-size: 1.1em;
+    text-align: right;
+    padding-top: 11px;
+}
+
+#LoginStatus a.log-out {
+    border: 0;
+    font-weight: bold;
+    color: #154273;
+    border-bottom: 1px solid #154273;
+}
+
+#LoginStatus a.log-out:hover {
+    text-decoration: none;
+    border: 0;
+}

@@ -1,7 +1,7 @@
 /* global define */
-define(['jquery', 'nsx/nsx-application', 'nsx/nsx-request', 'module'], function($, application, nsxRequest, module) {
-'use strict';
-    
+define(['jquery', 'nsx/nsx-application', 'nsx/nsx-request', 'module'], function ($, application, nsxRequest, module) {
+    'use strict';
+
     function getElementAction(element, action) {
         return application.getComponentUrl(element) + "/" + element.getElementName() + "-" + action;
     }

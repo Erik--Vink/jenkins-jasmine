@@ -1,0 +1,10 @@
+<div data-bind="attr: {'id': $data.id}, colSpan: $data.colSpan, colOffset: $data.colOffset">
+    <div class="form-group" data-bind="groupHasErrors: $data.uiField">
+        <div data-bind="with: uiLabel">
+            <div data-bind="template: { name: 'shared/viewLayoutComponents/' + TYPE_NAME, data: $data }"></div>
+        </div>
+        <div data-bind="foreach: uiField">
+            <div data-bind="template: { name: 'shared/viewLayoutComponents/' + TYPE_NAME, data: $data }"></div>
+        </div>
+    </div>
+</div>

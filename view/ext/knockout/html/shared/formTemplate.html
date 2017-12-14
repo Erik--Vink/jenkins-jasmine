@@ -1,0 +1,28 @@
+<!--todo: h1, p, class 'panel' en h4 verplaatsen naar XMLLayout component-->
+<h1>Opvoeren/wijzigen aangifte</h1>
+
+<p>Invoerscherm voor het opvoeren van: aangifte niet-aangifteplichtige, negatieve aangifte, positieve of nihil aangifte
+    of het wijzigen van een aangifte.</p>
+
+<div class="panel">
+    <h4 class="header">Aangifte</h4>
+    <form class="form-horizontal form-align-left" data-bind="submit: confirm, enterKey: confirm">
+
+        <div class="validation top-validation-message" data-bind="visible: dataViewModel.hasErrors">
+            <div class="validation-message">
+                <div class="div-header">
+                    <strong data-bind="translate: 'obWebclient.validatie.ongeldigFormulier.titel'"></strong>
+                </div>
+                <ul class="bullet-list" data-bind="foreach: dataViewModel.errorMessages">
+                    <li data-bind="text: $data"></li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-bind="with: layoutViewModel.viewparts">
+            <div class="row" data-bind="foreach: viewpart">
+                <div data-bind="template: { name: 'shared/viewLayoutComponents/' + TYPE_NAME, data: $data }"></div>
+            </div>
+        </div>
+    </form>
+</div>

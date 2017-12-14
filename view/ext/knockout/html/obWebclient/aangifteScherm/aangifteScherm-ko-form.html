@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/obfApp/styles/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/obfApp/styles/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/obfApp/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+
+    <link rel="stylesheet" href="/obfApp/styles/obWebclient/form.css">
+    <link rel="stylesheet" href="/obfApp/styles/obWebclient/rhs/PORTAL_default_bootstrap.css">
+
+    <script type="text/javascript" src="/obfApp/js/require/require.min.js"></script>
+    <script type="text/javascript" src="/obfApp/js/require/requireConfig.js"></script>
+</head>
+</html>
+<body>
+
+<div id="PageContainer">
+    <div id="menu-bar">
+        <div data-bind="template: {name: 'shared/menuTemplate', afterRender: loadAndAttachMenu}"></div>
+    </div>
+
+    <div id="page-model">
+        <div class="container">
+            <div id="Content">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div id="LeftContent"></div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div id="MainContent">
+                            <div id="form">
+                                <span data-bind="template: {
+                                    name: $data.templateName,
+                                    data: $data
+                                    }">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div id="RightContent"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="Footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    require(['jquery',
+            'obWebclient/aangifteScherm/view/AangifteSchermFormPage',
+            'obWebclient/shared/bindings/KnockoutExtenders',
+            'obWebclient/shared/bindings/KnockoutBindings',
+            'nsx/nsx-knockout-bindings',
+            'nsx/nsx-modules',
+            'nsx/nsx-ajax-error',
+            'bootstrapjs'],
+        function (jQuery, FormPage) {
+            jQuery(document).ready(function () {
+                var formPage = new FormPage();
+                formPage.applyModel();
+            });
+        }
+    );
+</script>
+
+</body>
+

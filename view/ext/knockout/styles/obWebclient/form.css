@@ -1,0 +1,37 @@
+.row.divider {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.form-align-left .control-label{
+    text-align: left;
+}
+
+.errorMessage:first-letter {
+    text-transform:capitalize;
+}
+
+span.nsx-clear-button {
+    position: relative;
+}
+
+span.nsx-clear-button a {
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    font-size: 14px;
+    color: darkgrey;
+    z-index: 2;
+}
+
+.nsx-clear-button.clearButton{
+    display: none !important; /** Hoort niet bij RSH */
+}
+
+.dropdown-menu li{
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover{
+    background-color: #ccc;
+}

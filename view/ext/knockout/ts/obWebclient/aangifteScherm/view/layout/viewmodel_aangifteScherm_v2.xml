@@ -1,0 +1,19 @@
+<v3:ViewElement v3:caption="Opvoeren aangifte" v3:id="string" xmlns:v3="urn://www.belastingdienst.nl/nscc/template/viewmodel/v3">
+    <dataelementModelLocation>http://www.company.org/cum/sonoras</dataelementModelLocation>
+    <viewparts>
+        <viewpart v3:id="header" v3:col-offset="1" v3:col-span="12" v3:row="1" v3:caption="">
+            <viewpart v3:id="leftHeader" v3:caption="" v3:col-offset="1" v3:col-span="6" v3:row="1">
+                <uiLabelFieldGroep>
+                    <uiLabel v3:id="messageIdLabel" v3:col-offset="1" v3:col-span="4" v3:row="1" v3:caption=""/>
+                    <uiField v3:id="messageId" v3:col-offset="2" v3:col-span="8" v3:row="1" v3:caption=""/>
+                </uiLabelFieldGroep>
+            </viewpart>
+            <viewpart v3:id="rightHeader" v3:caption="" v3:col-offset="2" v3:col-span="6" v3:row="1">
+                <uiLabelFieldGroep>
+                    <uiLabel v3:id="dagnummerLabel" v3:col-offset="1" v3:col-span="4" v3:row="1" v3:caption=""/>
+                    <uiField v3:id="dagnummer" v3:col-offset="2" v3:col-span="8" v3:row="1" v3:caption="" type="date"/>
+                </uiLabelFieldGroep>
+            </viewpart>
+        </viewpart>
+    </viewparts>
+</v3:ViewElement>

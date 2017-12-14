@@ -4,21 +4,21 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.normalizedsystems</groupId>
-    <artifactId>obnieuw</artifactId>
+    <artifactId>obWebclient</artifactId>
     <version>1.0</version>
   </parent>
 
   <groupId>org.normalizedsystems</groupId>
-  <artifactId>obnieuw-view</artifactId>
+  <artifactId>obWebclient-view</artifactId>
 
-  <name>obnieuw-view</name>
+  <name>obWebclient-view</name>
   <url>http://www.normalizedsystems.org</url>
 
   <dependencies>
     <!-- component -->
     <dependency>
       <groupId>org.normalizedsystems</groupId>
-      <artifactId>obnieuw-control</artifactId>
+      <artifactId>obWebclient-control</artifactId>
     </dependency>
 
     <!-- external -->

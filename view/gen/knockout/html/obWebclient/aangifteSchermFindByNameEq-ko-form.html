@@ -1,0 +1,19 @@
+<!-- expanded with version 3.1.6 -->
+<fieldset>
+<!-- anchor:form-fields:start -->
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.name', editMode), css: { error: detailModel.name.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.name"
+           data-bind="translate: 'obWebclient.aangifteScherm.name'">
+    </label>
+    <div class="controls" id="aangifteScherm.name" data-bind="focus: 1">
+      <input type='text' name='aangifteScherm.name' data-bind="textInput: detailModel.name, enable: isFieldEnabled('aangifteScherm.name', editMode)" />
+      <div data-bind="visible: detailModel.name.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.name.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<!-- anchor:form-fields:end -->
+</fieldset>

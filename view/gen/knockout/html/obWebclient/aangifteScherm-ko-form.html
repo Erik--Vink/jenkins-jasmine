@@ -1,0 +1,435 @@
+<form class="form-horizontal" data-bind="submit: $parent.confirm, enterKey: $parent.confirm, escapeKey: $parent.close">
+  <fieldset>
+  <input type="hidden" name="aangifteScherm.id" data-bind="value: detailModel.id" />
+  <!-- anchor:form-fields:start -->
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.messageId', editMode), css: { error: detailModel.messageId.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.messageId"
+           data-bind="translate: 'obWebclient.aangifteScherm.messageId'">
+    </label>
+    <div class="controls" id="aangifteScherm.messageId" data-bind="focus: 1">
+      <span data-bind="tagValue: {
+          field: detailModel.messageId,
+          tag: 'aangifteScherm_messageId'
+      }, enable: isFieldEnabled('aangifteScherm.messageId', editMode)">
+      </span>
+      <div data-bind="visible: detailModel.messageId.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.messageId.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.aanmaakMoment', editMode), css: { error: detailModel.aanmaakMoment.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.aanmaakMoment"
+           data-bind="translate: 'obWebclient.aangifteScherm.aanmaakMoment'">
+    </label>
+    <div class="controls" id="aangifteScherm.aanmaakMoment" data-bind="focus: 2">
+      <span data-bind="tagValue: {
+          field: detailModel.aanmaakMoment,
+          tag: 'aangifteScherm_aanmaakMoment'
+      }, enable: isFieldEnabled('aangifteScherm.aanmaakMoment', editMode)">
+      </span>
+      <div data-bind="visible: detailModel.aanmaakMoment.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.aanmaakMoment.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.prestatiesNlStandaardOmzet', editMode), css: { error: detailModel.prestatiesNlStandaardOmzet.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.prestatiesNlStandaardOmzet"
+           data-bind="translate: 'obWebclient.aangifteScherm.prestatiesNlStandaardOmzet'">
+    </label>
+    <div class="controls" id="aangifteScherm.prestatiesNlStandaardOmzet" data-bind="focus: 3">
+      <span data-bind='integerInput: detailModel.prestatiesNlStandaardOmzet, enable: isFieldEnabled("aangifteScherm.prestatiesNlStandaardOmzet", editMode)'></span>
+      <div data-bind="visible: detailModel.prestatiesNlStandaardOmzet.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.prestatiesNlStandaardOmzet.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.prestatiesNlVerlaagdOmzet', editMode), css: { error: detailModel.prestatiesNlVerlaagdOmzet.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.prestatiesNlVerlaagdOmzet"
+           data-bind="translate: 'obWebclient.aangifteScherm.prestatiesNlVerlaagdOmzet'">
+    </label>
+    <div class="controls" id="aangifteScherm.prestatiesNlVerlaagdOmzet" data-bind="focus: 4">
+      <span data-bind='integerInput: detailModel.prestatiesNlVerlaagdOmzet, enable: isFieldEnabled("aangifteScherm.prestatiesNlVerlaagdOmzet", editMode)'></span>
+      <div data-bind="visible: detailModel.prestatiesNlVerlaagdOmzet.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.prestatiesNlVerlaagdOmzet.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.prestatiesNlOverigOmzet', editMode), css: { error: detailModel.prestatiesNlOverigOmzet.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.prestatiesNlOverigOmzet"
+           data-bind="translate: 'obWebclient.aangifteScherm.prestatiesNlOverigOmzet'">
+    </label>
+    <div class="controls" id="aangifteScherm.prestatiesNlOverigOmzet" data-bind="focus: 5">
+      <span data-bind='integerInput: detailModel.prestatiesNlOverigOmzet, enable: isFieldEnabled("aangifteScherm.prestatiesNlOverigOmzet", editMode)'></span>
+      <div data-bind="visible: detailModel.prestatiesNlOverigOmzet.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.prestatiesNlOverigOmzet.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.prestatiesNlPriveOmzet', editMode), css: { error: detailModel.prestatiesNlPriveOmzet.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.prestatiesNlPriveOmzet"
+           data-bind="translate: 'obWebclient.aangifteScherm.prestatiesNlPriveOmzet'">
+    </label>
+    <div class="controls" id="aangifteScherm.prestatiesNlPriveOmzet" data-bind="focus: 6">
+      <span data-bind='integerInput: detailModel.prestatiesNlPriveOmzet, enable: isFieldEnabled("aangifteScherm.prestatiesNlPriveOmzet", editMode)'></span>
+      <div data-bind="visible: detailModel.prestatiesNlPriveOmzet.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.prestatiesNlPriveOmzet.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.prestatiesNlNietOf0BelastOmzet', editMode), css: { error: detailModel.prestatiesNlNietOf0BelastOmzet.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.prestatiesNlNietOf0BelastOmzet"
+           data-bind="translate: 'obWebclient.aangifteScherm.prestatiesNlNietOf0BelastOmzet'">
+    </label>
+    <div class="controls" id="aangifteScherm.prestatiesNlNietOf0BelastOmzet" data-bind="focus: 7">
+      <span data-bind='integerInput: detailModel.prestatiesNlNietOf0BelastOmzet, enable: isFieldEnabled("aangifteScherm.prestatiesNlNietOf0BelastOmzet", editMode)'></span>
+      <div data-bind="visible: detailModel.prestatiesNlNietOf0BelastOmzet.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.prestatiesNlNietOf0BelastOmzet.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.verleggingNlNaarUOmzet', editMode), css: { error: detailModel.verleggingNlNaarUOmzet.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.verleggingNlNaarUOmzet"
+           data-bind="translate: 'obWebclient.aangifteScherm.verleggingNlNaarUOmzet'">
+    </label>
+    <div class="controls" id="aangifteScherm.verleggingNlNaarUOmzet" data-bind="focus: 8">
+      <span data-bind='integerInput: detailModel.verleggingNlNaarUOmzet, enable: isFieldEnabled("aangifteScherm.verleggingNlNaarUOmzet", editMode)'></span>
+      <div data-bind="visible: detailModel.verleggingNlNaarUOmzet.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.verleggingNlNaarUOmzet.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.prestatiesNaarBtlNietEuOmzet', editMode), css: { error: detailModel.prestatiesNaarBtlNietEuOmzet.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.prestatiesNaarBtlNietEuOmzet"
+           data-bind="translate: 'obWebclient.aangifteScherm.prestatiesNaarBtlNietEuOmzet'">
+    </label>
+    <div class="controls" id="aangifteScherm.prestatiesNaarBtlNietEuOmzet" data-bind="focus: 9">
+      <span data-bind='integerInput: detailModel.prestatiesNaarBtlNietEuOmzet, enable: isFieldEnabled("aangifteScherm.prestatiesNaarBtlNietEuOmzet", editMode)'></span>
+      <div data-bind="visible: detailModel.prestatiesNaarBtlNietEuOmzet.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.prestatiesNaarBtlNietEuOmzet.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.prestatiesNaarBtlEuOmzet', editMode), css: { error: detailModel.prestatiesNaarBtlEuOmzet.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.prestatiesNaarBtlEuOmzet"
+           data-bind="translate: 'obWebclient.aangifteScherm.prestatiesNaarBtlEuOmzet'">
+    </label>
+    <div class="controls" id="aangifteScherm.prestatiesNaarBtlEuOmzet" data-bind="focus: 10">
+      <span data-bind='integerInput: detailModel.prestatiesNaarBtlEuOmzet, enable: isFieldEnabled("aangifteScherm.prestatiesNaarBtlEuOmzet", editMode)'></span>
+      <div data-bind="visible: detailModel.prestatiesNaarBtlEuOmzet.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.prestatiesNaarBtlEuOmzet.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.prestatiesNaarBtlInstallatieEuOmzet', editMode), css: { error: detailModel.prestatiesNaarBtlInstallatieEuOmzet.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.prestatiesNaarBtlInstallatieEuOmzet"
+           data-bind="translate: 'obWebclient.aangifteScherm.prestatiesNaarBtlInstallatieEuOmzet'">
+    </label>
+    <div class="controls" id="aangifteScherm.prestatiesNaarBtlInstallatieEuOmzet" data-bind="focus: 11">
+      <span data-bind='integerInput: detailModel.prestatiesNaarBtlInstallatieEuOmzet, enable: isFieldEnabled("aangifteScherm.prestatiesNaarBtlInstallatieEuOmzet", editMode)'></span>
+      <div data-bind="visible: detailModel.prestatiesNaarBtlInstallatieEuOmzet.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.prestatiesNaarBtlInstallatieEuOmzet.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.prestatiesUitBtlNietEuOmzet', editMode), css: { error: detailModel.prestatiesUitBtlNietEuOmzet.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.prestatiesUitBtlNietEuOmzet"
+           data-bind="translate: 'obWebclient.aangifteScherm.prestatiesUitBtlNietEuOmzet'">
+    </label>
+    <div class="controls" id="aangifteScherm.prestatiesUitBtlNietEuOmzet" data-bind="focus: 12">
+      <span data-bind='integerInput: detailModel.prestatiesUitBtlNietEuOmzet, enable: isFieldEnabled("aangifteScherm.prestatiesUitBtlNietEuOmzet", editMode)'></span>
+      <div data-bind="visible: detailModel.prestatiesUitBtlNietEuOmzet.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.prestatiesUitBtlNietEuOmzet.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.prestatiesUitBtlEuOmzet', editMode), css: { error: detailModel.prestatiesUitBtlEuOmzet.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.prestatiesUitBtlEuOmzet"
+           data-bind="translate: 'obWebclient.aangifteScherm.prestatiesUitBtlEuOmzet'">
+    </label>
+    <div class="controls" id="aangifteScherm.prestatiesUitBtlEuOmzet" data-bind="focus: 13">
+      <span data-bind='integerInput: detailModel.prestatiesUitBtlEuOmzet, enable: isFieldEnabled("aangifteScherm.prestatiesUitBtlEuOmzet", editMode)'></span>
+      <div data-bind="visible: detailModel.prestatiesUitBtlEuOmzet.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.prestatiesUitBtlEuOmzet.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.prestatiesNlStandaardBelasting', editMode), css: { error: detailModel.prestatiesNlStandaardBelasting.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.prestatiesNlStandaardBelasting"
+           data-bind="translate: 'obWebclient.aangifteScherm.prestatiesNlStandaardBelasting'">
+    </label>
+    <div class="controls" id="aangifteScherm.prestatiesNlStandaardBelasting" data-bind="focus: 14">
+      <span data-bind='integerInput: detailModel.prestatiesNlStandaardBelasting, enable: isFieldEnabled("aangifteScherm.prestatiesNlStandaardBelasting", editMode)'></span>
+      <div data-bind="visible: detailModel.prestatiesNlStandaardBelasting.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.prestatiesNlStandaardBelasting.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.prestatiesNlVerlaagdBelasting', editMode), css: { error: detailModel.prestatiesNlVerlaagdBelasting.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.prestatiesNlVerlaagdBelasting"
+           data-bind="translate: 'obWebclient.aangifteScherm.prestatiesNlVerlaagdBelasting'">
+    </label>
+    <div class="controls" id="aangifteScherm.prestatiesNlVerlaagdBelasting" data-bind="focus: 15">
+      <span data-bind='integerInput: detailModel.prestatiesNlVerlaagdBelasting, enable: isFieldEnabled("aangifteScherm.prestatiesNlVerlaagdBelasting", editMode)'></span>
+      <div data-bind="visible: detailModel.prestatiesNlVerlaagdBelasting.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.prestatiesNlVerlaagdBelasting.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.prestatiesNlOverigBelasting', editMode), css: { error: detailModel.prestatiesNlOverigBelasting.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.prestatiesNlOverigBelasting"
+           data-bind="translate: 'obWebclient.aangifteScherm.prestatiesNlOverigBelasting'">
+    </label>
+    <div class="controls" id="aangifteScherm.prestatiesNlOverigBelasting" data-bind="focus: 16">
+      <span data-bind='integerInput: detailModel.prestatiesNlOverigBelasting, enable: isFieldEnabled("aangifteScherm.prestatiesNlOverigBelasting", editMode)'></span>
+      <div data-bind="visible: detailModel.prestatiesNlOverigBelasting.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.prestatiesNlOverigBelasting.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.prestatiesNlPriveBelasting', editMode), css: { error: detailModel.prestatiesNlPriveBelasting.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.prestatiesNlPriveBelasting"
+           data-bind="translate: 'obWebclient.aangifteScherm.prestatiesNlPriveBelasting'">
+    </label>
+    <div class="controls" id="aangifteScherm.prestatiesNlPriveBelasting" data-bind="focus: 17">
+      <span data-bind='integerInput: detailModel.prestatiesNlPriveBelasting, enable: isFieldEnabled("aangifteScherm.prestatiesNlPriveBelasting", editMode)'></span>
+      <div data-bind="visible: detailModel.prestatiesNlPriveBelasting.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.prestatiesNlPriveBelasting.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.verleggingNlNaarUBelasting', editMode), css: { error: detailModel.verleggingNlNaarUBelasting.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.verleggingNlNaarUBelasting"
+           data-bind="translate: 'obWebclient.aangifteScherm.verleggingNlNaarUBelasting'">
+    </label>
+    <div class="controls" id="aangifteScherm.verleggingNlNaarUBelasting" data-bind="focus: 18">
+      <span data-bind='integerInput: detailModel.verleggingNlNaarUBelasting, enable: isFieldEnabled("aangifteScherm.verleggingNlNaarUBelasting", editMode)'></span>
+      <div data-bind="visible: detailModel.verleggingNlNaarUBelasting.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.verleggingNlNaarUBelasting.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.prestatiesUitBtlNietEuBelasting', editMode), css: { error: detailModel.prestatiesUitBtlNietEuBelasting.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.prestatiesUitBtlNietEuBelasting"
+           data-bind="translate: 'obWebclient.aangifteScherm.prestatiesUitBtlNietEuBelasting'">
+    </label>
+    <div class="controls" id="aangifteScherm.prestatiesUitBtlNietEuBelasting" data-bind="focus: 19">
+      <span data-bind='integerInput: detailModel.prestatiesUitBtlNietEuBelasting, enable: isFieldEnabled("aangifteScherm.prestatiesUitBtlNietEuBelasting", editMode)'></span>
+      <div data-bind="visible: detailModel.prestatiesUitBtlNietEuBelasting.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.prestatiesUitBtlNietEuBelasting.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.prestatiesUitBtlEuBelasting', editMode), css: { error: detailModel.prestatiesUitBtlEuBelasting.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.prestatiesUitBtlEuBelasting"
+           data-bind="translate: 'obWebclient.aangifteScherm.prestatiesUitBtlEuBelasting'">
+    </label>
+    <div class="controls" id="aangifteScherm.prestatiesUitBtlEuBelasting" data-bind="focus: 20">
+      <span data-bind='integerInput: detailModel.prestatiesUitBtlEuBelasting, enable: isFieldEnabled("aangifteScherm.prestatiesUitBtlEuBelasting", editMode)'></span>
+      <div data-bind="visible: detailModel.prestatiesUitBtlEuBelasting.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.prestatiesUitBtlEuBelasting.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.verschuldigdeOmzetbelasting', editMode), css: { error: detailModel.verschuldigdeOmzetbelasting.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.verschuldigdeOmzetbelasting"
+           data-bind="translate: 'obWebclient.aangifteScherm.verschuldigdeOmzetbelasting'">
+    </label>
+    <div class="controls" id="aangifteScherm.verschuldigdeOmzetbelasting" data-bind="focus: 21">
+      <span data-bind='integerInput: detailModel.verschuldigdeOmzetbelasting, enable: isFieldEnabled("aangifteScherm.verschuldigdeOmzetbelasting", editMode)'></span>
+      <div data-bind="visible: detailModel.verschuldigdeOmzetbelasting.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.verschuldigdeOmzetbelasting.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.voorbelasting', editMode), css: { error: detailModel.voorbelasting.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.voorbelasting"
+           data-bind="translate: 'obWebclient.aangifteScherm.voorbelasting'">
+    </label>
+    <div class="controls" id="aangifteScherm.voorbelasting" data-bind="focus: 22">
+      <span data-bind='integerInput: detailModel.voorbelasting, enable: isFieldEnabled("aangifteScherm.voorbelasting", editMode)'></span>
+      <div data-bind="visible: detailModel.voorbelasting.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.voorbelasting.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.verminderingKor', editMode), css: { error: detailModel.verminderingKor.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.verminderingKor"
+           data-bind="translate: 'obWebclient.aangifteScherm.verminderingKor'">
+    </label>
+    <div class="controls" id="aangifteScherm.verminderingKor" data-bind="focus: 23">
+      <span data-bind='integerInput: detailModel.verminderingKor, enable: isFieldEnabled("aangifteScherm.verminderingKor", editMode)'></span>
+      <div data-bind="visible: detailModel.verminderingKor.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.verminderingKor.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.totaalTeBetalenTerugTeVragen', editMode), css: { error: detailModel.totaalTeBetalenTerugTeVragen.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.totaalTeBetalenTerugTeVragen"
+           data-bind="translate: 'obWebclient.aangifteScherm.totaalTeBetalenTerugTeVragen'">
+    </label>
+    <div class="controls" id="aangifteScherm.totaalTeBetalenTerugTeVragen" data-bind="focus: 24">
+      <span data-bind='integerInput: detailModel.totaalTeBetalenTerugTeVragen, enable: isFieldEnabled("aangifteScherm.totaalTeBetalenTerugTeVragen", editMode)'></span>
+      <div data-bind="visible: detailModel.totaalTeBetalenTerugTeVragen.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.totaalTeBetalenTerugTeVragen.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.obNummer', editMode), css: { error: detailModel.obNummer.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.obNummer"
+           data-bind="translate: 'obWebclient.aangifteScherm.obNummer'">
+    </label>
+    <div class="controls" id="aangifteScherm.obNummer" data-bind="focus: 25">
+      <input type='text' name='aangifteScherm.obNummer' data-bind="textInput: detailModel.obNummer, enable: isFieldEnabled('aangifteScherm.obNummer', editMode)" />
+      <div data-bind="visible: detailModel.obNummer.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.obNummer.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.tijdvak', editMode), css: { error: detailModel.tijdvak.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.tijdvak"
+           data-bind="translate: 'obWebclient.aangifteScherm.tijdvak'">
+    </label>
+    <div class="controls" id="aangifteScherm.tijdvak" data-bind="focus: 26">
+      <span data-bind='integerInput: detailModel.tijdvak, enable: isFieldEnabled("aangifteScherm.tijdvak", editMode)'></span>
+      <div data-bind="visible: detailModel.tijdvak.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.tijdvak.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.dagnummer', editMode), css: { error: detailModel.dagnummer.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.dagnummer"
+           data-bind="translate: 'obWebclient.aangifteScherm.dagnummer'">
+    </label>
+    <div class="controls" id="aangifteScherm.dagnummer" data-bind="focus: 27">
+      <span data-bind='integerInput: detailModel.dagnummer, enable: isFieldEnabled("aangifteScherm.dagnummer", editMode)'></span>
+      <div data-bind="visible: detailModel.dagnummer.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.dagnummer.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.volgnummer', editMode), css: { error: detailModel.volgnummer.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.volgnummer"
+           data-bind="translate: 'obWebclient.aangifteScherm.volgnummer'">
+    </label>
+    <div class="controls" id="aangifteScherm.volgnummer" data-bind="focus: 28">
+      <span data-bind='integerInput: detailModel.volgnummer, enable: isFieldEnabled("aangifteScherm.volgnummer", editMode)'></span>
+      <div data-bind="visible: detailModel.volgnummer.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.volgnummer.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.bezorgIndicatie', editMode), css: { error: detailModel.bezorgIndicatie.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.bezorgIndicatie"
+           data-bind="translate: 'obWebclient.aangifteScherm.bezorgIndicatie'">
+    </label>
+    <div class="controls" id="aangifteScherm.bezorgIndicatie" data-bind="focus: 29">
+      <span data-bind='integerInput: detailModel.bezorgIndicatie, enable: isFieldEnabled("aangifteScherm.bezorgIndicatie", editMode)'></span>
+      <div data-bind="visible: detailModel.bezorgIndicatie.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.bezorgIndicatie.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="control-group" data-bind="visible: isFieldVisible('aangifteScherm.datumBinnenkomst', editMode), css: { error: detailModel.datumBinnenkomst.hasErrors}">
+    <label class="control-label"
+           for="aangifteScherm.datumBinnenkomst"
+           data-bind="translate: 'obWebclient.aangifteScherm.datumBinnenkomst'">
+    </label>
+    <div class="controls" id="aangifteScherm.datumBinnenkomst" data-bind="focus: 30">
+      <span data-bind='dateInput: detailModel.datumBinnenkomst, enable: isFieldEnabled("aangifteScherm.datumBinnenkomst", editMode)'></span>
+      <div data-bind="visible: detailModel.datumBinnenkomst.hasErrors" class="alert alert-error">
+        <ul data-bind="with: detailModel.datumBinnenkomst.errorMessages">
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- anchor:form-fields:end -->
+  </fieldset>
+</form>

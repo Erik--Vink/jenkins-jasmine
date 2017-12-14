@@ -1,21 +1,27 @@
 {
   "scripts": {
-    "test": "karma start"
+    "jsonix": "java -jar node_modules/jsonix/lib/jsonix-schema-compiler-full.jar -d ext/knockout/ts/obWebclient/shared/view/layout -p ViewLayoutMapping ext/knockout/ts/obWebclient/shared/view/layout/viewmodel_v4.xsd",
+    "test:jenkins": "karma start karma.conf.jenkins.js",
+    "test": "karma start karma.conf.js"
   },
   "devDependencies": {
+    "@types/es6-promise": "0.0.33",
     "@types/jasmine": "^2.6.2",
+    "@types/jquery": "^3.2.16",
+    "@types/uuid": "^3.4.3",
     "jasmine-core": "^2.8.0",
     "karma": "^1.5.0",
-    "karma-chrome-launcher": "2.2.0",
+    "karma-html-reporter": "^0.2.7",
     "karma-jasmine": "^1.1.0",
-    "karma-jasmine-html-reporter": "^0.2.2",
     "karma-junit-reporter": "^1.2.0",
     "karma-phantomjs-launcher": "^1.0.4",
-    "karma-requirejs": "^1.1.0",
     "karma-typescript": "^3.0.8",
-    "requirejs": "2.3.5"
+    "typescript": "^2.5.3"
   },
   "dependencies": {
-    "typescript": "^2.5.3"
+    "es6-promise": "^4.1.1",
+    "jsonix": "^2.4.1",
+    "moment": "^2.19.3",
+    "uuid": "^3.1.0"
   }
 }

@@ -4,24 +4,28 @@ define(['jquery', 'nsx/nsx-application', 'nsx/nsx-component', 'nsx/nsx-element',
     var applicationUrl;
     var applicationName;
     var origin;
+
     function getApplicationName() {
         if (applicationName === undefined) {
             applicationName = window.location.pathname.split("/")[1];
         }
         return applicationName;
     }
+
     function getOrigin() {
         if (origin === undefined) {
             origin = window.location.protocol + "//" + window.location.host;
         }
         return origin;
     }
+
     function getApplicationUrl() {
         if (applicationUrl === undefined) {
             applicationUrl = getOrigin() + "/" + getApplicationName();
         }
         return applicationUrl;
     }
+
     /*
       componentOrElement can be:
       - name of the component
@@ -44,6 +48,7 @@ define(['jquery', 'nsx/nsx-application', 'nsx/nsx-component', 'nsx/nsx-element',
         }
         return applicationUrl + "/" + componentName;
     }
+
     /**
      * @param {string} resource
      */
@@ -54,8 +59,10 @@ define(['jquery', 'nsx/nsx-application', 'nsx/nsx-component', 'nsx/nsx-element',
             + (startsWithSlash ? "" : "/")
             + resource;
     }
+
     // simple cache
     var translations = {};
+
     function getTranslation(key) {
         if (translations[key]) {
             return translations[key];
@@ -63,7 +70,7 @@ define(['jquery', 'nsx/nsx-application', 'nsx/nsx-component', 'nsx/nsx-element',
         var value = "[translation not found]";
         jQuery.ajax({
             url: applicationUrl + "/translate-json",
-            data: { key: key },
+            data: {key: key},
             async: false,
             success: function (result) {
                 if (result.success) {
@@ -74,6 +81,7 @@ define(['jquery', 'nsx/nsx-application', 'nsx/nsx-component', 'nsx/nsx-element',
         });
         return value;
     }
+
     function getElement(componentName, elementName) {
         var index;
         if (!elementName) {
@@ -89,6 +97,7 @@ define(['jquery', 'nsx/nsx-application', 'nsx/nsx-component', 'nsx/nsx-element',
         var component = components.getComponent(componentName);
         return component.getElement(elementName);
     }
+
     applicationUrl = getApplicationUrl();
     var moduleExport = {
         getElement: getElement,

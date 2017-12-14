@@ -1,0 +1,15 @@
+<!--todo: TIJDELIJK! 'classes buttons, col-12 en row' moeten in een UIActionGroep component komen-->
+<div class="col-sm-12">
+    <div class="buttons">
+        <div class="row">
+            <div data-bind="colSpan: $data.colSpan, colOffset: $data.colOffset">
+                <button data-bind="attr: {'id': $data.id, 'type': otherAttributes.buttonType, 'tabindex': otherAttributes.focus}, css: otherAttributes.class" class="btn">
+                    <span data-bind="translate: caption"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

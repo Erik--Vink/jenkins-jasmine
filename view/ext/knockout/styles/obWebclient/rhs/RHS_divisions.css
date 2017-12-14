@@ -1,0 +1,17 @@
+/** Indeling */
+#PageContainer {
+    padding-bottom: 50px;
+}
+
+#Content {
+    padding: 20px 20px 0 20px;
+    background-color: #fff;
+}
+
+#Content h1 {
+    font-family: Arial, Geneva, Helvetica, sans-serif;
+    font-size: 2.2em;
+    line-height: 1.10em;
+    padding: 0 0 12px 0;
+    font-weight: normal;
+}

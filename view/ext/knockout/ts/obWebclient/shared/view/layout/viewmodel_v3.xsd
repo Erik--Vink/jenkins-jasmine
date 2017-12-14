@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn://www.belastingdienst.nl/nscc/template/viewmodel/v3" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn://www.belastingdienst.nl/nscc/template/viewmodel/v3" xmlns:vm="urn://www.belastingdienst.nl/nscc/template/viewmodel/v3">
+	<xs:element name="ViewElement">
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>Dit representeert het scherm, verwijst naar een NS Dataelement en bevat viewparts. Een scherm is layouttechnisch opgedeeld in 12 colomns waarbinnen viewparts gepositioneerd kunnen worden.</xs:documentation>
+			</xs:annotation>
+			<xs:sequence>
+				<xs:element name="dataelementModelLocation" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="viewparts" type="Viewparts" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="Identification"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="code">
+		<xs:restriction base="xs:string">
+			<!--xs:pattern value="&lt;!\[CDATA\[.*\]\]&gt;"/-->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="CustomCode">
+		<xs:sequence>
+			<xs:element name="code" type="code" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="file" use="optional" type="xs:anyURI"/>
+	</xs:complexType>
+	<xs:complexType name="UIAction">
+		<xs:complexContent>
+			<xs:extension base="UIElement">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="UIElement" abstract="true">
+		<xs:sequence/>
+		<xs:attributeGroup ref="Custom"/>
+		<xs:attributeGroup ref="Identification"/>
+		<xs:attributeGroup ref="Appearance"/>
+		<xs:attributeGroup ref="Postion"/>
+	</xs:complexType>
+	<xs:complexType name="UIField">
+		<xs:complexContent>
+			<xs:extension base="UIElement">
+				<xs:sequence>
+					<xs:element name="validator" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+				<xs:attribute name="length" use="optional" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>max input length</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="type" use="optional" type="xs:string"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="UILabel">
+		<xs:complexContent>
+			<xs:extension base="UIElement">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="UILabelFieldGroep">
+		<xs:complexContent>
+			<xs:extension base="UIElement">
+				<xs:sequence>
+					<xs:element name="uiLabel" type="UILabel" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="uiField" type="UIField" minOccurs="1" maxOccurs="4"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ViewPart">
+		<xs:annotation>
+			<xs:documentation>Een viewpart bevat UI elementen die functioneel meer bindingen met lekaar hebben dan met het geheel. Daarnaast kan een viewpart andere viewparts bevatten. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="UIElement">
+				<xs:sequence>
+					<xs:group ref="inlineForm" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Viewparts">
+		<xs:sequence>
+			<xs:element name="viewpart" type="ViewPart" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:group name="inlineForm">
+		<xs:choice>
+			<xs:element name="viewpart" type="ViewPart" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="uiAction" type="UIAction" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="uiLabelFieldGroep" type="UILabelFieldGroep" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="uiLabel" type="UILabel" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="customCode" type="CustomCode" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:choice>
+	</xs:group>
+	<xs:attributeGroup name="Appearance">
+		<xs:attribute name="visiable" use="optional" type="xs:boolean"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="Custom">
+		<xs:anyAttribute processContents="lax"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="Identification">
+		<xs:attribute name="caption" use="optional" type="xs:string" form="qualified"/>
+		<xs:attribute name="id" use="optional" type="xs:string" form="qualified"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="Postion">
+		<xs:attribute name="col-offset" use="optional" type="xs:int" form="qualified"/>
+		<xs:attribute name="col-span" use="optional" type="xs:int" form="qualified"/>
+		<xs:attribute name="row" use="optional" type="xs:int" form="qualified"/>
+	</xs:attributeGroup>
+</xs:schema>

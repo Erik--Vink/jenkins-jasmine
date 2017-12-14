@@ -1,0 +1,51 @@
+.has-error .control-label { /* has-error vervangt validation-error */
+    color: #D52B1E;
+}
+
+.has-error input.text.form-control {
+    border-color: #D52B1E;
+}
+
+.validation {
+    padding: 10px 0 0 0;
+    background: url(../../rhs/images/backgrounds/validation.gif) 0 0 no-repeat;
+    margin-right: 0;
+}
+
+.top-validation-message {
+    background: #fff;
+    padding-top: 0;
+    margin-top:20px;
+    margin-bottom: 10px;
+}
+
+.validation-message {
+    padding: 8px 8px 0 33px;
+    min-height: 22px;
+    background: #f2bfbb url(../../rhs/images/backgrounds/validation-message.gif) 5px 5px no-repeat;
+}
+
+.validation-message div.div-header {
+    font-size: 1.1em;
+    line-height: 1.40em;
+    padding-bottom: 7px;
+}
+
+ul.bullet-list {
+    padding: 0 0 15px 0;
+}
+
+.validation ul.bullet-list {
+    padding-bottom: 8px;
+}
+
+ul.bullet-list li {
+    font-size: 1.1em;
+    line-height: 1.40em;
+    padding: 0 0 0 10px;
+    background: url(../../rhs/images/bullets/bullet-list.gif) 0 7px no-repeat;
+}
+
+.validation ul.bullet-list li {
+    padding-bottom: 7px;
+}

@@ -1,0 +1,16 @@
+.panel {
+    background: #ddeff8;
+    margin-bottom: 0;
+    padding: 0 20px 12px 20px;
+    border-radius: 0;
+}
+
+.panel h4.header {
+    font-family: Arial, Geneva, Helvetica, sans-serif;
+    font-size: 1.5em;
+    background: #8fcae7;
+    padding: 7px 0 7px 20px;
+    margin: 0 -20px 14px -20px;
+    font-weight: bold;
+    min-height: 2px;
+}

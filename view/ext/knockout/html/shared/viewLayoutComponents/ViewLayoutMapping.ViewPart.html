@@ -1,0 +1,5 @@
+<div data-bind="attr: { 'id': $data.id }, colSpan: $data.colSpan, colOffset: $data.colOffset, visible: $data.visable, css: $data.class">
+    <div data-bind="foreach: inlineForm" class="row">
+        <div data-bind="template: { name: 'shared/viewLayoutComponents/' + TYPE_NAME, data: $data }"></div>
+    </div>
+</div>

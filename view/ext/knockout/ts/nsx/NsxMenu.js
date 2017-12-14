@@ -1,4 +1,4 @@
-define(function(require, ) {
+define(function (require,) {
 
     var $ = require('jquery');
     var actions = require('nsx/nsx-actions');
@@ -14,14 +14,14 @@ define(function(require, ) {
         return menuItem;
     }
 
-    function createSeparator(separator) { 
+    function createSeparator(separator) {
         return $("<li class='divider'/>");
     }
 
     function createMenu(menu) {
         var holder = $("<li class='dropdown'/>");
         var title = $("<a class='dropdown-toggle' data-toggle='dropdown'/>");
-        title.html(menu.title  + " <b class='caret'></b>");
+        title.html(menu.title + " <b class='caret'></b>");
         holder.append(title);
         holder.append(parseList(menu.items, 'dropdown-menu'));
 
@@ -29,18 +29,18 @@ define(function(require, ) {
     }
 
     function parse(item) {
-        switch(item.type) {
-        case 'menu':
-            return createMenu(item);
-            break;
-        case 'item':
-            return createMenuItem(item);
-            break;
-        case 'separator':
-            return createSeparator(item);
-            break;
-        default:
-            return '<span>unknown entry</span>';
+        switch (item.type) {
+            case 'menu':
+                return createMenu(item);
+                break;
+            case 'item':
+                return createMenuItem(item);
+                break;
+            case 'separator':
+                return createSeparator(item);
+                break;
+            default:
+                return '<span>unknown entry</span>';
         }
     }
 
@@ -70,8 +70,8 @@ define(function(require, ) {
             menu: menuName
         };
 
-        $.get(url, data, function(jsonResult) {
-            attachMenu(jsonResult.list, targetId);    
+        $.get(url, data, function (jsonResult) {
+            attachMenu(jsonResult.list, targetId);
         });
     }
 

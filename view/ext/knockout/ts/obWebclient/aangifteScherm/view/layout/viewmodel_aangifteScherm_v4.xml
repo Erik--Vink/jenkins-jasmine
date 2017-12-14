@@ -1,0 +1,120 @@
+<v4:ViewElement v4:caption="Opvoeren aangifte" v4:id="string"
+                xmlns:v4="urn://www.belastingdienst.nl/nscc/template/viewmodel/v4">
+    <dataelementModelLocation>http://www.company.org/cum/sonoras</dataelementModelLocation>
+    <viewparts>
+        <viewpart v4:col-span="12" visable="false">
+            <uiLabelFieldGroep v4:col-span="12">
+                <uiLabel v4:col-span="4" v4:caption=""/>
+                <uiField v4:id="messageId" v4:col-span="8"/>
+            </uiLabelFieldGroep>
+        </viewpart>
+        <viewpart v4:col-span="12" v4:id="header">
+            <viewpart v4:col-span="6">
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="4" v4:caption="obWebclient.obNummer"/>
+                    <uiField v4:id="obNummer" v4:col-span="8"/>
+                </uiLabelFieldGroep>
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="4" v4:caption="obWebclient.bezorgIndicatie"/>
+                    <uiField v4:id="bezorgIndicatie" v4:col-span="8" type="selectList"
+                             tag="aangifteScherm_bezorgIndicatie"/>
+                </uiLabelFieldGroep>
+            </viewpart>
+            <viewpart v4:col-span="6">
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="5" v4:caption="obWebclient.datumBinnenkomst"/>
+                    <uiField v4:id="datumBinnenkomst" v4:col-span="5" v4:col-offset="2" type="date"/>
+                </uiLabelFieldGroep>
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="4" v4:caption="obWebclient.dagnummer"/>
+                    <uiField v4:id="dagnummer" v4:col-span="3" v4:col-offset="5" type="number"/>
+                </uiLabelFieldGroep>
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="4" v4:caption="obWebclient.volgnummer"/>
+                    <uiField v4:id="volgnummer" v4:col-span="3" v4:col-offset="5" type="number"/>
+                </uiLabelFieldGroep>
+            </viewpart>
+        </viewpart>
+        <viewpart v4:id="body" v4:col-span="12">
+            <viewpart v4:col-span="12">
+                <uiLabel v4:col-span="3" v4:col-offset="6" v4:caption="obWebclient.omzetbedrag"/>
+                <uiLabel v4:col-span="3" v4:caption="obWebclient.belastingbedrag"/>
+            </viewpart>
+            <viewpart v4:col-span="12">
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="6" v4:caption="obWebclient.prestatiesNlStandaardOmzet"/>
+                    <uiField v4:col-span="3" v4:id="prestatiesNlStandaardOmzet"/>
+                    <uiField v4:col-span="3" v4:id="prestatiesNlStandaardBelasting"/>
+                </uiLabelFieldGroep>
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="6" v4:caption="obWebclient.prestatiesNlVerlaagdOmzet"/>
+                    <uiField v4:col-span="3" v4:id="prestatiesNlVerlaagdOmzet"/>
+                    <uiField v4:col-span="3" v4:id="prestatiesNlVerlaagdBelasting"/>
+                </uiLabelFieldGroep>
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="6" v4:caption="obWebclient.prestatiesNlOverigOmzet"/>
+                    <uiField v4:col-span="3" v4:id="prestatiesNlOverigOmzet"/>
+                    <uiField v4:col-span="3" v4:id="prestatiesNlOverigBelasting"/>
+                </uiLabelFieldGroep>
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="6" v4:caption="obWebclient.prestatiesNlPriveOmzet"/>
+                    <uiField v4:col-span="3" v4:id="prestatiesNlPriveOmzet"/>
+                    <uiField v4:col-span="3" v4:id="prestatiesNlPriveBelasting"/>
+                </uiLabelFieldGroep>
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="6" v4:caption="obWebclient.prestatiesNlNietOf0BelastOmzet"/>
+                    <uiField v4:col-span="3" v4:id="prestatiesNlNietOf0BelastOmzet"/>
+                </uiLabelFieldGroep>
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="6" v4:caption="obWebclient.verleggingNlNaarUOmzet"/>
+                    <uiField v4:col-span="3" v4:id="verleggingNlNaarUOmzet"/>
+                    <uiField v4:col-span="3" v4:id="verleggingNlNaarUBelasting"/>
+                </uiLabelFieldGroep>
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="6" v4:caption="obWebclient.prestatiesNaarBtlNietEuOmzet"/>
+                    <uiField v4:col-span="3" v4:id="prestatiesNaarBtlNietEuOmzet"/>
+                </uiLabelFieldGroep>
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="6" v4:caption="obWebclient.prestatiesNaarBtlEuOmzet"/>
+                    <uiField v4:col-span="3" v4:id="prestatiesNaarBtlEuOmzet"/>
+                </uiLabelFieldGroep>
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="6" v4:caption="obWebclient.prestatiesNaarBtlInstallatieEuOmzet"/>
+                    <uiField v4:col-span="3" v4:id="prestatiesNaarBtlInstallatieEuOmzet"/>
+                </uiLabelFieldGroep>
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="6" v4:caption="obWebclient.prestatiesUitBtlNietEuOmzet"/>
+                    <uiField v4:col-span="3" v4:id="prestatiesUitBtlNietEuOmzet"/>
+                    <uiField v4:col-span="3" v4:id="prestatiesUitBtlNietEuBelasting"/>
+                </uiLabelFieldGroep>
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="6" v4:caption="obWebclient.prestatiesUitBtlEuOmzet"/>
+                    <uiField v4:col-span="3" v4:id="prestatiesUitBtlEuOmzet"/>
+                    <uiField v4:col-span="3" v4:id="prestatiesUitBtlEuBelasting"/>
+                </uiLabelFieldGroep>
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="6" v4:caption="obWebclient.verschuldigdeOmzetbelasting"/>
+                    <uiField v4:col-span="3" v4:col-offset="3" v4:id="verschuldigdeOmzetbelasting"/>
+                </uiLabelFieldGroep>
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="6" v4:caption="obWebclient.voorbelasting"/>
+                    <uiField v4:col-span="3" v4:col-offset="3" v4:id="voorbelasting"/>
+                </uiLabelFieldGroep>
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="6" v4:caption="obWebclient.verminderingKor"/>
+                    <uiField v4:col-span="3" v4:col-offset="3" v4:id="verminderingKor"/>
+                </uiLabelFieldGroep>
+                <uiLabelFieldGroep v4:col-span="12">
+                    <uiLabel v4:col-span="6" v4:caption="obWebclient.totaalTeBetalenTerugTeVragen"/>
+                    <uiField v4:col-span="3" v4:col-offset="3" v4:id="totaalTeBetalenTerugTeVragen"/>
+                </uiLabelFieldGroep>
+            </viewpart>
+        </viewpart>
+        <viewpart v4:id="footer" v4:col-span="12">
+            <viewpart v4:col-span="12">
+                <uiAction v4:col-span="2" v4:id="verwerkKnop" v4:caption="obWebclient.knop.verwerk" buttonType="submit"/>
+            </viewpart>
+        </viewpart>
+    </viewparts>
+</v4:ViewElement>
+

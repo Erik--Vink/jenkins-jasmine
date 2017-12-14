@@ -1,13 +1,20 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
     "allowJs": true,
     "module": "amd",
     "target": "es5",
     "outDir": "ext/knockout/js",
-    "rootDir": "./ext/knockout/ts"
+    "rootDir": "./ext/knockout/ts",
+    "baseUrl": "./",
+    "paths": {
+      "*": [
+        "./node_modules/@types/*"
+      ]
+    }
   },
   "include": [
-    "ext/knockout/**/*.ts"
+    "ext/knockout/ts/**/*.ts"
   ],
   "exclude": [
     "node_modules"

@@ -1,0 +1,16 @@
+<div data-bind="colSpan: $data.colSpan, colOffset: $data.colOffset">
+    <div data-bind="if: $data.type">
+        <div data-bind="template: {name: 'shared/viewLayoutComponents/UIField/' + TYPE_NAME + '.' + type}"></div>
+    </div>
+    <div data-bind="ifnot: $data.type">
+        <div data-bind="template: {name: 'shared/viewLayoutComponents/UIField/' + TYPE_NAME + '.text'}"></div>
+    </div>
+        <div data-bind="attr: {'id':id + 'ErrorMessages'},visible: $root.dataViewModel[id].hasErrors" class="validation">
+            <div class="validation-message">
+                <div class="div-header"></div>
+                <ul data-bind="with: $root.dataViewModel[id].errorMessages" class="bullet-list">
+                    <li data-bind="text: $data"></li>
+                </ul>
+            </div>
+        </div>
+</div>
